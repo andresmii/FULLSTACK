@@ -5,27 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="Favicon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="css/styles.css" as="styles" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Tu Carrera Digital - Zona Centro</title>
+    <!-- <style>
+      h1 {
+        color: #214adf;
+      }
+    </style> -->
   </head>
   <body>
     <header>
       <nav>
-        <div>
-          <a href="#">Login Alumnos</a>
-          <a href="#">Login Empresas</a>
+        <div class="nav-login">
+          <a class="login" href="#">Login Alumnos</a>
+          <a class="login" href="#">Login Empresas</a>
         </div>
         <div>
-          <div>
+          <div class="nav-logo">
             <img
+              class="nav-logo tcd-logo"
               src="img/Tu-carrera-digital-general.png"
               alt="tu carrera digital logo"
             />
           </div>
-          <div>
+          <div class="nav-list">
             <a href="#">Cursos</a>
             <a href="#">Sobre Nosotros</a>
-            <a href="#">Infórmate</a>
+            <a class="info-button" href="#">Infórmate</a>
           </div>
         </div>
       </nav>
@@ -38,13 +45,15 @@
     </div>
 
     <main>
-      <div>
-        <h1>
-          Descubre la formación que te dará la oportunidad de convertirte en un
-          profesional digital
-        </h1>
-        <img src="img/zona-centro/ico-centro.png" alt="icon-centro-arrow" />
-        <a href="#">VER CURSOS</a>
+      <div class="main-section">
+        <div>
+          <h1>
+            Descubre la formación que te dará la oportunidad de convertirte en
+            un profesional digital
+          </h1>
+          <img src="img/zona-centro/ico-centro.png" alt="icon-centro-arrow" />
+          <a href="#">VER CURSOS</a>
+        </div>
       </div>
     </main>
 

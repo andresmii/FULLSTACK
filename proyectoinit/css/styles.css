@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+}
+
+.nav-login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.info-button {
+  background-color: #f76666;
+  border: solid 2px #f76666;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+
+.info-button:hover {
+  background-color: #17a2b8;
+  border: solid 2px #17a2b8;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+
+h1 {
+  background-color: rgba(248, 102, 102, 0.65);
+  color: #fff;
+  display: block;
+  font-size: 45px;
+  font-weight: 800;
+  margin: 100px 0 0 100px;
+  padding: 35px;
+  width: 400px;
+}
+
+.main-section {
+  background-image: url("../img/11641893944_banner_zona_centro.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
