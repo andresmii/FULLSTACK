@@ -28,6 +28,8 @@ body {
   margin: 0;
 }
 
+/* INFORMATE RIGHT SIDE BUTTON */
+
 .informate {
   position: fixed;
   right: 0;
@@ -38,11 +40,16 @@ body {
   height: 85px;
 }
 
+/* SECTION HEADER */
+
 header {
   padding-top: 1rem;
   padding-bottom: 2rem;
   padding-right: 3%;
   padding-left: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav {
@@ -76,6 +83,7 @@ span {
 
 .login:hover {
   color: var(--redTCD);
+  text-decoration: underline;
 }
 
 .nav-logo-list {
@@ -101,13 +109,16 @@ span {
 }
 
 .list {
-  color: var(--pinkTCD);
+  color: var(--blackTCD);
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.list:hover {
+  text-decoration: underline;
 }
 
 .info-button {
@@ -132,6 +143,8 @@ span {
   text-decoration: none;
 }
 
+/* SECTION MAIN */
+
 .section {
   margin: 0;
   width: 100%;
@@ -150,6 +163,7 @@ span {
 }
 
 .main-section-div-el {
+  max-width: 80%;
   width: 600px;
   padding: 0 15px 0 15px;
   margin: 0 0;
@@ -196,6 +210,8 @@ a.ver-cursos:hover {
   padding: 23px 90px 23px 90px;
 }
 
+/* SECTION LOGOS UE/ADECCO */
+
 .logo-section {
   display: flex;
   justify-content: center;
@@ -217,6 +233,8 @@ a.ver-cursos:hover {
 .logo {
   padding: 3rem 1rem 3rem 1rem;
 }
+
+/* SECTION CURSOS */
 
 .section-cursos {
   width: 60%;
@@ -339,4 +357,105 @@ a.active {
   border: 2px solid var(--whiteTCD);
   background-color: var(--pinkTCD);
   color: var(--whiteTCD);
+}
+
+/* SECTION INTERESES */
+
+.section-interes {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+  width: 100%;
+}
+
+.intereses {
+  max-width: 960px;
+  width: 90%;
+  margin-top: 4rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.intereses-pregunta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.intereses-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-pide {
+  background-color: var(--pinkTCD);
+  border: solid 2px var(--pinkTCD);
+  border-radius: 50px;
+  color: var(--whiteTCD);
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  padding: 2rem 4rem;
+  text-decoration: none;
+}
+
+.btn-pide:hover {
+  background-color: var(--darkblueTCD);
+  border: solid 2px var(--darkblueTCD);
+  text-decoration: underline;
+}
+
+/* SECTION VIDEO */
+
+.section-video {
+  display: flex;
+  justify-content: center;
+  padding-top: 7rem;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.video-tcd {
+  max-height: 600px;
+  max-width: 960px;
+  height: 540px;
+  width: 960px;
+}
+
+.youtube-tcd-video {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+}
+
+/* SECTION PARA QUIEN */
+
+.box-left-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.left-box {
+  padding: 70px 15px 0 15px;
+  max-width: 40%;
+}
+
+.right-box {
+  padding: 70px 15px 0 15px;
+  max-width: 40%;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
 }
