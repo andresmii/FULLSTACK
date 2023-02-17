@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="normalize" href="css/normalize.css" />
+    <link rel="preload" href="css/normalize.css" as="normalize" />
     <link rel="icon" href="Favicon.png" />
     <link rel="preload" href="css/styles.css" as="styles" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -19,94 +21,101 @@
       <nav>
         <div class="nav-login">
           <a class="login" href="#">Login Alumnos</a>
+          <span>|</span>
           <a class="login" href="#">Login Empresas</a>
         </div>
-        <div>
+        <div class="nav-logo-list">
           <div class="nav-logo">
             <img
-              class="nav-logo tcd-logo"
+              class="tcd-logo"
               src="img/Tu-carrera-digital-general.png"
               alt="tu carrera digital logo"
             />
           </div>
           <div class="nav-list">
-            <a href="#">Cursos</a>
-            <a href="#">Sobre Nosotros</a>
-            <a class="info-button" href="#">Infórmate</a>
+            <a class="list" href="#">Cursos</a>
+            <a class="list" href="#">Sobre Nosotros</a>
+            <a class="list info-button" href="#">Infórmate</a>
           </div>
         </div>
       </nav>
     </header>
 
-    <div>
+    <div class="informate">
       <a href="#">
-        <img src="img/ico-informate.png" alt="informate-icon" />
+        <img src="img/zona-centro/CTA-informate.png" alt="informate-icon" />
       </a>
     </div>
 
-    <main>
+    <main class="section" id="main-section">
       <div class="main-section">
-        <div>
-          <h1>
-            Descubre la formación que te dará la oportunidad de convertirte en
-            un profesional digital
-          </h1>
-          <img src="img/zona-centro/ico-centro.png" alt="icon-centro-arrow" />
-          <a href="#">VER CURSOS</a>
+        <div class="main-section-div">
+          <div class="main-section-div-el">
+            <h1>
+              Descubre la formación que te dará la oportunidad de convertirte en
+              un profesional digital
+            </h1>
+            <img src="img/zona-centro/ico-centro.png" alt="icon-centro-arrow" />
+            <a class="ver-cursos" href="#">VER CURSOS</a>
+          </div>
         </div>
       </div>
     </main>
 
-    <section>
-      <div>
-        <div>
+    <section class="section logo-section">
+      <div class="logo-left-right">
+        <div class="logo logo-left">
           <img src="img/Logos-oficiales.png" alt="logos ue" />
+        </div>
+        <div class="logo logo-right">
           <img src="img/Logo-Adecco.png" alt="logo adecco" />
         </div>
       </div>
     </section>
 
-    <section>
-      <div>
-        <h3>CURSOS</h3>
-        <h2>CAMBIA TU FUTURO</h2>
+    <section class="section">
+      <div class="section-cursos">
+        <h3 class="cursos">CURSOS</h3>
+        <h2 class="cambia-futuro">CAMBIA TU FUTURO</h2>
       </div>
     </section>
 
-    <section>
-      <div>
-        <a href="#">VER TODO</a>
-        <a href="#">ALCOBENDAS Y LA MORALEJA</a>
-        <a href="#">CARBAJOSA DE LA SAGRADA</a>
-        <a href="#">MADRID</a>
-        <a href="#">POZUELO DE ALARCÓN</a>
-      </div>
-      <div>
-        <div>
-          <h2>MARKETING DIGITAL</h2>
-          <a href="#">INSCRIBIRME</a>
+    <section class="section-cursos-location">
+      <div class="cursos-location-menu-box">
+        <div class="cursos-location-menu">
+          <a class="cursos-location-box active" href="#">VER TODO</a>
+          <a class="cursos-location-box" href="#">ALCOBENDAS Y LA MORALEJA</a>
+          <a class="cursos-location-box" href="#">CARBAJOSA DE LA SAGRADA</a>
+          <a class="cursos-location-box" href="#">MADRID</a>
+          <a class="cursos-location-box" href="#">POZUELO DE ALARCÓN</a>
         </div>
-        <div>
-          <h2>PROGRAMACIÓN DE VIDEOJUEGOS, DISEÑO 3D Y REALIDAD VIRTUAL</h2>
-          <a href="#">INSCRIBIRME</a>
-        </div>
-        <div>
-          <h2>PROGRAMACIÓN WEB FULL STACK</h2>
-          <a href="#">INSCRIBIRME</a>
+        <div class="cursos-box">
+          <div class="box box-1">
+            <h2>MARKETING DIGITAL</h2>
+            <a class="inscribirme-box" href="#">INSCRIBIRME</a>
+          </div>
+          <div class="box box-2">
+            <h2>PROGRAMACIÓN DE VIDEOJUEGOS, DISEÑO 3D Y REALIDAD VIRTUAL</h2>
+            <a class="inscribirme-box" href="#">INSCRIBIRME</a>
+          </div>
+          <div class="box box-3">
+            <h2>PROGRAMACIÓN WEB FULL STACK</h2>
+            <a class="inscribirme-box" href="#">INSCRIBIRME</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="section-interes">
       <div>
         <h3>¿TE INTERESA ALGÚN OTRO CURSO EN TU CIUDAD?</h3>
         <div>
-          <a href="#">¡PÍDENOSLO!</a>
+          <a class="" href="#">¡PÍDENOSLO!</a>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="section section-video">
       <div>
         <div>
           <iframe src="" frameborder="0" title=""></iframe>

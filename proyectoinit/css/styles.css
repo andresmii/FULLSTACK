@@ -1,59 +1,140 @@
+:root {
+  --blackTCD: #343a40;
+  --whiteTCD: #f8f9fa;
+  --redTCD: #dc3545;
+  --pinkTCD: #f76666;
+  --darkblueTCD: #02052f;
+  --greenTCD: #17a2b8;
+  --transparenteRedTCD: rgba(248, 102, 102, 0.65);
+  --ogFont: "Open Sans", sans-serif;
+  --inscribirmeFont: "DinBold", sans-serif;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  /* font-family: var(--ogFont); */
+  color: var(--darkblueTCD);
+}
+
+html {
+  font-size: 62.5%; /* 1 rem = 10px */
+}
+
 body {
+  background-color: var(--whiteTCD);
+  font-size: 16px; /* 1 rem = 10px */
   margin: 0;
+}
+
+.informate {
+  position: fixed;
+  right: 0;
+  top: 320px;
+  bottom: 13.4px;
+  z-index: 5;
+  width: 96px;
+  height: 85px;
+}
+
+header {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+nav {
+  background-color: var(--whiteTCD);
+  /* margin: 0 2rem 0 2rem; */
+  padding: 1rem 1rem;
+  width: 90%;
 }
 
 .nav-login {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  margin-right: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+
+span {
+  color: var(--pinkTCD);
+}
+
+.login {
+  color: var(--pinkTCD);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login:hover {
+  color: var(--redTCD);
+}
+
+.nav-logo-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .nav-logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 1rem;
+  max-width: 34%;
 }
 
 .nav-list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  margin-right: 10px;
+  width: 33%;
+  max-width: 66%;
+}
+
+.list {
+  color: var(--pinkTCD);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .info-button {
-  background-color: #f76666;
-  border: solid 2px #f76666;
-  border-radius: 15px;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding: 5px 8px;
+  background-color: var(--pinkTCD);
+  border: solid 2px var(--pinkTCD);
+  border-radius: 50px;
+  color: var(--whiteTCD);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem;
   text-decoration: none;
 }
 
 .info-button:hover {
-  background-color: #17a2b8;
-  border: solid 2px #17a2b8;
-  border-radius: 15px;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding: 5px 8px;
+  background-color: var(--greenTCD);
+  border: solid 2px var(--greenTCD);
+  border-radius: 50px;
+  color: var(--whiteTCD);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem;
   text-decoration: none;
 }
 
-h1 {
-  background-color: rgba(248, 102, 102, 0.65);
-  color: #fff;
-  display: block;
-  font-size: 45px;
-  font-weight: 800;
-  margin: 100px 0 0 100px;
-  padding: 35px;
-  width: 400px;
+.section {
+  margin: 0;
+  width: 100%;
 }
 
 .main-section {
@@ -62,4 +143,200 @@ h1 {
   background-size: cover;
   margin: 0;
   padding: 0;
+}
+
+.main-section-div {
+  padding: 5% 5% 10% 5%;
+}
+
+.main-section-div-el {
+  width: 600px;
+  padding: 0 15px 0 15px;
+  margin: 0 0;
+  border: none;
+}
+
+h1 {
+  background-color: var(--transparenteRedTCD);
+  color: var(--whiteTCD);
+  display: block;
+  font-size: 47px;
+  font-weight: 800;
+  padding: 35px;
+  max-width: 700px;
+  margin: 0 0 1.5rem 0;
+}
+
+a.ver-cursos {
+  background: #000 url("../img/zona-centro/ico-flecha-derecha-white.png")
+    no-repeat right 20px center;
+  border: solid 2px #000;
+  border-radius: 0px;
+  color: var(--whiteTCD);
+  float: right;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: 23px 90px 23px 90px;
+}
+
+a.ver-cursos:hover {
+  background: var(--whiteTCD)
+    url("../img/zona-centro/ico-flecha-derecha-red.png") no-repeat right 20px
+    center;
+  border: solid 2px var(--pinkTCD);
+  border-radius: 0px;
+  color: var(--pinkTCD);
+  float: right;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: 23px 90px 23px 90px;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-left-right {
+  align-items: center;
+  background: var(--whiteTCD);
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: -8rem;
+  padding: 0 2rem 0 2rem;
+  width: 900px;
+  /* border: solid 2px black; */
+}
+
+.logo {
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+.section-cursos {
+  width: 60%;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+h3.cursos {
+  color: var(--pinkTCD);
+  font-size: 18px;
+  font-weight: 800;
+  padding: 40px 0 10px 0;
+  margin-bottom: 3rem;
+}
+
+h2.cambia-futuro {
+  color: var(--darkblueTCD);
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.cursos-location-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: center;
+}
+
+.cursos-location-box {
+  border: 1.5px solid var(--pinkTCD);
+  background-color: var(--whiteTCD);
+  color: var(--darkblueTCD);
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0.5rem 2rem 0.5rem;
+  padding: 1.8rem 2rem 1.8rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+a.active {
+  border: 1.5px solid var(--pinkTCD);
+  background-color: var(--pinkTCD);
+  color: var(--whiteTCD);
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0.5rem 2rem 0.5rem;
+  padding: 1.8rem 2rem 1.8rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cursos-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  color: var(--whiteTCD);
+  margin: 1rem 1rem 1rem 1rem;
+  max-width: 700px;
+  min-height: 300px;
+  /* object-fit: cover; */
+  padding: 40px 60px 40px 60px;
+  width: 570px;
+}
+
+.box-1 {
+  background: url("../img/zona-centro/Curso-marketing-digital-centro.png");
+  background-repeat: no-repeat;
+}
+.box-2 {
+  background: url("../img/zona-centro/Curso-programacion-videojuegos-centro.png");
+  background-repeat: no-repeat;
+}
+.box-3 {
+  background: url("../img/zona-centro/Curso-programacion-web-full-stack-centro.png");
+  background-repeat: no-repeat;
+}
+
+.box-1 h2,
+.box-2 h2,
+.box-3 h2 {
+  color: var(--whiteTCD);
+  margin-top: 0;
+  margin-bottom: 52px;
+  max-width: 350px;
+}
+
+.inscribirme-box {
+  border: 2px solid var(--whiteTCD);
+  background-color: var(--whiteTCD);
+  /* bottom: 50px; */
+  color: var(--pinkTCD);
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 20px 44px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--inscribirmeFont);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.inscribirme-box:hover {
+  border: 2px solid var(--whiteTCD);
+  background-color: var(--pinkTCD);
+  color: var(--whiteTCD);
 }
