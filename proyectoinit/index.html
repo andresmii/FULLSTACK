@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="contenedor">
         <div class="nav-login">
           <a class="login" href="#">Login Alumnos</a>
           <span>|</span>
@@ -49,20 +49,20 @@
 
     <main class="section" id="main-section">
       <div class="main-section">
-        <div class="main-section-div">
+        <div class="main-section-div contenedor">
           <div class="main-section-div-el">
-            <h1>
+            <h1 class="texto">
               Descubre la formación que te dará la oportunidad de convertirte en
               un profesional digital
             </h1>
             <img src="img/zona-centro/ico-centro.png" alt="icon-centro-arrow" />
-            <a class="ver-cursos" href="#">VER CURSOS</a>
+            <a class="ver-cursos" href="#section-cursos-location">VER CURSOS</a>
           </div>
         </div>
       </div>
     </main>
 
-    <section class="section logo-section">
+    <section class="logo-section contenedor">
       <div class="logo-left-right">
         <div class="logo logo-left">
           <img src="img/Logos-oficiales.png" alt="logos ue" />
@@ -73,15 +73,15 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section contenedor">
       <div class="section-cursos">
         <h3 class="cursos">CURSOS</h3>
         <h2 class="cambia-futuro">CAMBIA TU FUTURO</h2>
       </div>
     </section>
 
-    <section class="section-cursos-location">
-      <div class="cursos-location-menu-box">
+    <section class="section section-cursos-location">
+      <div class="cursos-location-menu-box contenedor">
         <div class="cursos-location-menu">
           <a class="cursos-location-box active" href="#">VER TODO</a>
           <a class="cursos-location-box" href="#">ALCOBENDAS Y LA MORALEJA</a>
@@ -106,7 +106,7 @@
       </div>
     </section>
 
-    <section class="section-interes">
+    <section class="section section-interes">
       <div class="intereses">
         <h3 class="intereses-pregunta">
           <strong>¿TE INTERESA ALGÚN OTRO CURSO EN TU CIUDAD?</strong>
@@ -118,7 +118,7 @@
     </section>
 
     <section class="section section-video">
-      <div class="video-container">
+      <div class="video-container contenedor">
         <div class="video-tcd">
           <iframe
             class="youtube-tcd-video"
@@ -132,17 +132,19 @@
     </section>
 
     <section class="section section-paraquien">
-      <div class="box-left-right">
+      <div class="box-left-right contenedor">
         <div class="left-box">
-          <h3>¿PARA QUIÉN SON ESTOS CURSOS?</h3>
+          <h3>
+            <b class="paraquien-title"> ¿PARA QUIÉN SON ESTOS CURSOS? </b>
+          </h3>
           <h2>
-            <b>
+            <b class="paraquien-subtitle">
               Si quieres dar un giro a tu carrera profesional y formarte en
               profesiones digitales con futuro, este es tu lugar.
             </b>
           </h2>
           <div>
-            <p>
+            <p class="paraquien-p">
               Cuando eliges un curso en <b>Tu Carrera Digital</b>, estás dando
               el paso definitivo hacia las profesiones con más demanda del
               momento, como Marketing Digital, Desarrollo Web Full Stack y
@@ -153,17 +155,27 @@
               de encontrar un empleo.
             </p>
           </div>
-          <h4>
-            PARA PARTICIPAR, NECESITARÁS ESTAR INSCRITO EN GARANTÍA JUVENIL
+          <h4 class="h4-garantiajuvenil">
+            <b class="inscr-garantiajuvenil">
+              PARA PARTICIPAR, NECESITARÁS ESTAR INSCRITO EN GARANTÍA JUVENIL
+            </b>
           </h4>
-          <a href="#">IR A LA WEB DE GARANTÍA JUVENIL</a>
-          <div>
-            <b
-              >Descárgate esta infografía en la que te mostramos cómo descargar
-              tu certificado de Garantía Juvenil:</b
+          <a
+            class="a-garantiajuvenil"
+            href="https://www.sepe.es/HomeSepe/Personas/encontrar-trabajo/Garantia-Juvenil/que-es-garantia-juvenil"
+            >IR A LA WEB DE GARANTÍA JUVENIL</a
+          >
+          <div class="margin-bottom">
+            <b class="text-descarga-garantiajuvenil">
+              Descárgate esta infografía en la que te mostramos cómo descargar
+              tu certificado de Garantía Juvenil:
+            </b>
+          </div>
+          <div class="btn-descarga-garantiajuvenil">
+            <a class="text-btn-descarga-garantiajuvenil" href="#"
+              >DESCARGAR INFOGRAFÍA ADJUNTA</a
             >
           </div>
-          <a href="#">DESCARGAR INFOGRAFÍA ADJUNTA</a>
         </div>
         <div class="right-box">
           <a href="#"
@@ -176,79 +188,112 @@
       </div>
     </section>
 
-    <section>
-      <div>
-        <div>
-          <h2>Localizaciones:</h2>
+    <section class="section-localizaciones">
+      <div class="contenedor">
+        <div class="localizaciones-text-title">
+          <h2 class="localizaciones-text">Localizaciones:</h2>
         </div>
-        <div>
-          <h3>MADRID</h3>
-          <p>Avenida Manoteras 32, 28050, Madrid, Madrid.</p>
-        </div>
-        <div>
-          <h3>POZUELO DE ALARCÓN</h3>
-          <p>Calle San Juan de la Cruz 2, 28223, Madrid, Madrid.</p>
-        </div>
-        <div>
-          <h3>MADRID</h3>
-          <p>Calle San Sotero 3, Planta 3° Aula 31, 28037, Madrid, Madrid.</p>
-        </div>
-        <div>
-          <h3>CARBAJOSA DE LA SAGRADA</h3>
-          <p>Calle Segunda 43, 37188, Castilla y Leon, Salamanca.</p>
-        </div>
-        <div>
-          <h3>ALCOBENDAS Y LA MORALEJA</h3>
-          <p>Calle Soria 43, 28100, Madrid, Madrid.</p>
+        <div class="localizaciones-box">
+          <div class="localizaciones-box-individual">
+            <h3 class="localizaciones-text">MADRID</h3>
+            <p class="localizaciones-text">
+              Avenida Manoteras 32, 28050, Madrid, Madrid.
+            </p>
+          </div>
+          <div class="localizaciones-box-individual">
+            <h3 class="localizaciones-text">POZUELO DE ALARCÓN</h3>
+            <p class="localizaciones-text">
+              Calle San Juan de la Cruz 2, 28223, Madrid, Madrid.
+            </p>
+          </div>
+          <div class="localizaciones-box-individual">
+            <h3 class="localizaciones-text">MADRID</h3>
+            <p class="localizaciones-text">
+              Calle San Sotero 3, Planta 3° Aula 31, 28037, Madrid, Madrid.
+            </p>
+          </div>
+          <div class="localizaciones-box-individual">
+            <h3 class="localizaciones-text">CARBAJOSA DE LA SAGRADA</h3>
+            <p class="localizaciones-text">
+              Calle Segunda 43, 37188, Castilla y Leon, Salamanca.
+            </p>
+          </div>
+          <div class="localizaciones-box-individual">
+            <h3 class="localizaciones-text">ALCOBENDAS Y LA MORALEJA</h3>
+            <p class="localizaciones-text">
+              Calle Soria 43, 28100, Madrid, Madrid.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div>
-        <div>
-          <div>
-            <h3>CONTACTAR</h3>
-            <h2>¿TIENES DUDAS? HABLA CON NOSTROS:</h2>
-          </div>
+    <section class="section section-contactar">
+      <div class="contenedor">
+        <div class="contactar-title-subtitle">
+          <h3 class="contactar-title">CONTACTAR</h3>
+          <h2 class="contactar-subtitle">¿TIENES DUDAS? HABLA CON NOSTROS:</h2>
         </div>
-        <div>
-          <div>
-            <img src="img/ico-TLF.png" alt="" />
-            <p>LLÁMANOS:</p>
-            <a href="#">638024408</a>
+        <div class="contactar-div">
+          <div class="contactar-div-individual">
+            <img class="icon" src="img/ico-TLF.png" alt="telefono icon" />
+            <p class="contactar-label">
+              LLÁMANOS:
+              <br />
+              <a class="zona-centro-contacto" href="tel:638024408">638024408</a>
+            </p>
           </div>
-          <div>
-            <img src="img/ico-EMAIL.png" alt="" />
-            <p>ESCRÍBENOS:</p>
-            <a href="#">patric.departearroyo@adecco.com</a>
+          <div class="contactar-div-individual">
+            <img class="icon" src="img/ico-EMAIL.png" alt="email icon" />
+            <p class="contactar-label">
+              ESCRÍBENOS:
+              <br />
+              <a
+                class="zona-centro-contacto"
+                href="mailto:patric.departearroyo@adecco.com"
+                >patric.departearroyo@adecco.com</a
+              >
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <div>
-        <div>
-          <div>
+      <div class="contenedor">
+        <div class="footer-top-row">
+          <div class="footer zona-centro">
             <h3>Cursos Zona-Centro</h3>
           </div>
-          <div>
-            <a href="#">
+          <div class="footer sobre-nosotros">
+            <a href="https://www.tucarreradigital.es/sobre-nosotros">
               <h3>Sobre Nosotros</h3>
             </a>
           </div>
         </div>
-        <div>
-          <div>
-            <a href="#">Preguntas Frecuentes (FAQ)</a>
-            <a href="#">Política de Cookies</a>
-            <a href="#">Política de Privacidad</a>
-            <a href="#">Aviso Legal</a>
+        <div class="links-legales">
+          <div id="links-legales">
+            <a href="https://www.tucarreradigital.es/preguntas-frecuentes"
+              >Preguntas Frecuentes (FAQ)</a
+            >
+            <a
+              href="https://www.tucarreradigital.es/zona-centro/politica-de-cookies"
+              >Política de Cookies</a
+            >
+            <a
+              href="https://www.tucarreradigital.es/zona-centro/politica-de-privacidad"
+              >Política de Privacidad</a
+            >
+            <a href="https://www.tucarreradigital.es/zona-centro/aviso-legal"
+              >Aviso Legal</a
+            >
           </div>
         </div>
       </div>
     </footer>
-    <a href="#" class="scroll-to-top"></a>
+    <a href="#" class="scroll-to-top"> </a>
+    <div>
+      <a class="cookies-btn" href="#"></a>
+    </div>
   </body>
 </html>
