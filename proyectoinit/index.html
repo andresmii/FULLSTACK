@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="normalize" href="css/normalize.css" />
     <link rel="preload" href="css/normalize.css" as="normalize" />
+    <link rel="normalize" href="css/normalize.css" />
     <link rel="icon" href="Favicon.png" />
     <link rel="preload" href="css/styles.css" as="styles" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -291,6 +291,25 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Open your bank account <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Next step &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
     <a href="#" class="scroll-to-top"> </a>
     <div>
       <a class="cookies-btn" href="#"></a>

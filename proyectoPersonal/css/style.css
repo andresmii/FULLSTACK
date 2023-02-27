@@ -1,0 +1,274 @@
+:root {
+  --beige: #dcb882;
+  --beige2: #e5cda8;
+  --beige3: #e2c79e;
+  --beigeGradient: linear-gradient(
+    155deg,
+    var(--beige2) 0%,
+    var(--beige) 35%,
+    var(--gold) 100%
+  );
+  --beigeMenuGradient: linear-gradient(
+    155deg,
+    var(--beige) 0%,
+    var(--gold) 100%
+  );
+  --black: #03001c;
+  --darkMaroon: #430d27;
+  --darkPink: #ea728c;
+  --darkGold: #a57732;
+  --gold: #eeb359;
+  --lightBeige: #f0e4d7;
+  --lightBlue: #9fd8df;
+  --lightRed: #dd5353;
+  --pink: #f5c0c0;
+  --purple: #713045;
+  --red: #b73e3e;
+
+  /* --- DARK MODE --- */
+}
+
+* {
+  font-family: "Gantari", sans-serif;
+  color: var(--black);
+}
+
+html {
+  font-size: 62.5%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--lightBeige);
+  font-size: 16px;
+  margin: 0;
+  width: 100%;
+}
+
+.container {
+  width: 114rem;
+  margin: 0 auto 0 auto;
+}
+
+/* //////////////////// HEADER //////////////////// */
+
+header {
+  background: var(--beigeGradient);
+  height: 9rem;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 700;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 2rem 0 0.5rem 0;
+}
+
+.navbar-div {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  height: 100%;
+  justify-content: space-between;
+  width: auto;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav-el {
+  color: var(--black);
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-el:hover,
+.dropdown:hover .dropbtn {
+  text-decoration: underline;
+}
+
+.logo-div {
+  height: 100%;
+  position: static;
+  justify-self: center;
+}
+
+.logo {
+  display: flex;
+  height: 6rem;
+  width: 6rem;
+}
+
+.control-bar {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+  width: auto;
+}
+.control-el {
+  color: var(--black);
+  margin: 0 0.5rem;
+  padding: 0 0.1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+/* //////////////////// DROPDOWN MENU //////////////////// */
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: var(--black);
+  background: transparent;
+  margin: 0;
+}
+
+.dropdown-content {
+  border-radius: 0.5rem;
+  display: none;
+  position: absolute;
+  background: var(--beigeMenuGradient);
+  min-width: 14rem;
+  padding: 1rem 1.2rem;
+  z-index: 600;
+}
+
+.dropdown-content a {
+  color: var(--black);
+  display: block;
+  float: none;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+.dropdown-content a h4 {
+  color: var(--black);
+  display: block;
+  float: none;
+  font-size: 1.45rem;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* //////////////////// MAIN //////////////////// */
+
+.main_section {
+  margin: 0;
+  position: relative;
+  top: 9rem;
+  width: 100%;
+}
+
+.banner {
+  background-image: url("../img/Mesa_de_trabajo_14_2bc1cfba-66fa-4e91-a26d-451f5c52b7fd_2160x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 63rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* //////////////////// SECTION = HORIZONTAL CONTAINER //////////////////// */
+
+.show_section {
+  background: var(--beigeGradient);
+  height: 35rem;
+  margin: 0;
+  padding: 9rem 0;
+  position: relative;
+  top: 9rem;
+  width: 100%;
+}
+
+.navigation-title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.show_section .container .navigation-title h2 {
+  margin: 1rem 0;
+}
+
+.see-all {
+  padding-right: 1rem;
+  text-decoration: none;
+}
+.see-all:hover {
+  text-decoration: underline;
+}
+
+.navigation-container {
+  height: 30rem;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.product-wrapper {
+  width: 225rem;
+}
+
+.product {
+  display: inline-block;
+  justify-content: center;
+  margin: 0 1rem;
+  width: auto;
+}
+
+.product img {
+  height: 20rem;
+  margin-bottom: 0;
+  width: 20rem;
+}
+
+.product a h4,
+.product p {
+  margin: 5px 0;
+  padding-left: 5px;
+  width: fit-content;
+}
+
+.product a {
+  text-decoration: none;
+}
+
+.product a:hover {
+  text-decoration: underline;
+}
