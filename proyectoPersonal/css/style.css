@@ -2,14 +2,13 @@
   --beige: #dcb882;
   --beige2: #e5cda8;
   --beige3: #e2c79e;
-  --beigeGradient: linear-gradient(
-    155deg,
-    var(--beige2) 0%,
-    var(--beige) 35%,
+  --beigeGradient: radial-gradient(
+    /* 155deg, */ var(--beige2) 0%,
+    var(--beige) 50%,
     var(--gold) 100%
   );
   --beigeMenuGradient: linear-gradient(
-    155deg,
+    180deg,
     var(--beige) 0%,
     var(--gold) 100%
   );
@@ -147,12 +146,12 @@ header {
 }
 
 .dropdown-content {
+  background: var(--beigeMenuGradient);
   border-radius: 0.5rem;
   display: none;
-  position: absolute;
-  background: var(--beigeMenuGradient);
   min-width: 14rem;
   padding: 1rem 1.2rem;
+  position: absolute;
   z-index: 600;
 }
 

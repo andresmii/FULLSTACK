@@ -44,15 +44,16 @@ body {
 
 /* UP TOP BUTTON */
 
-.scroll-to-top {
+#scroll-to-top {
   background-image: url("../img/up-top.png");
   background-position: center center;
   background-size: cover;
-  width: 60px;
-  height: 60px;
-  right: 5rem;
   bottom: 75px;
+  height: 60px;
   position: fixed;
+  right: 5rem;
+  scroll-behavior: smooth;
+  width: 60px;
 }
 
 /* COOKIES BUTTON */
@@ -66,6 +67,141 @@ body {
   left: 2rem;
   bottom: 3rem;
   position: fixed;
+}
+
+/* MODAL WINDOW */
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75%;
+  width: 45%;
+  overflow: auto;
+
+  background-color: var(--whiteTCD);
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  padding: 6rem;
+  z-index: 100;
+  transition: all 2s;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  border: none;
+  background: url("../img/icon-close-modal.png");
+  height: 5rem;
+  width: 5rem;
+}
+
+.form-banner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.form-banner img {
+  width: 100%;
+}
+
+.modal__form {
+  border: 1px solid var(--redTCD);
+  display: inline-block;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+}
+
+.modal-info {
+  font-size: 1.6rem;
+}
+
+.modal__header {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.nombre-form,
+.dob-form,
+.tel-form,
+.email-form,
+.ciudad-form,
+.programa-form,
+.observaciones {
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  width: 95%;
+}
+
+.apellido-form {
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  width: 45%;
+}
+
+.programa-form label {
+  font-size: 1.4rem;
+}
+
+.tyc {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  width: 95%;
+}
+
+.tyc p {
+  margin: 0.5rem 0;
+}
+
+.tyc-accept {
+  display: flex;
+  width: 90%;
+}
+
+.tyc-accept a {
+  color: var(--redTCD);
+  text-decoration: underline;
+}
+
+.btn-submit {
+  width: 100%;
+}
+
+.btn {
+  background-color: var(--pinkTCD);
+  border: none;
+  border-radius: 5rem;
+  color: var(--whiteTCD);
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.7rem 1.2rem;
+  text-decoration: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transition: all 2s;
+  width: 100%;
+  z-index: 50;
 }
 
 /* ------------------------------ */
@@ -165,21 +301,19 @@ body {
 
   /* SECTION CURSOS */
   .section-cursos {
-    width: 100%;
-    /* padding-right: 15px;
-  padding-left: 15px; */
-    padding-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 50px;
     text-align: center;
+    width: 100%;
   }
 
   h3.cursos {
     color: var(--pinkTCD);
     font-size: 18px;
     font-weight: 800;
-    padding: 40px 0 10px 0;
     margin-bottom: 3rem;
+    padding: 40px 0 10px 0;
   }
 
   h2.cambia-futuro {
@@ -192,14 +326,12 @@ body {
   .cursos-location-menu {
     display: flex;
     flex-wrap: wrap;
-    /* margin-left: -15px;
-  margin-right: -15px; */
     justify-content: center;
   }
 
   .cursos-location-box {
-    border: 1.5px solid var(--pinkTCD);
     background-color: var(--whiteTCD);
+    border: 1.5px solid var(--pinkTCD);
     color: var(--darkblueTCD);
     display: flex;
     justify-content: space-around;
@@ -212,8 +344,8 @@ body {
   }
 
   a.active {
-    border: 1.5px solid var(--pinkTCD);
     background-color: var(--pinkTCD);
+    border: 1.5px solid var(--pinkTCD);
     color: var(--whiteTCD);
     display: flex;
     justify-content: space-around;
@@ -266,16 +398,16 @@ body {
   }
 
   .inscribirme-box {
-    border: 2px solid var(--whiteTCD);
     background-color: var(--whiteTCD);
+    border: 2px solid var(--whiteTCD);
+    bottom: 2rem;
     color: var(--pinkTCD);
     font-family: var(--inscribirmeFont);
     font-size: 14px;
     font-weight: bold;
+    left: 2rem;
     padding: 20px 44px;
     position: absolute;
-    bottom: 2rem;
-    left: 2rem;
     text-align: center;
     text-decoration: none;
   }
@@ -1722,6 +1854,7 @@ span {
   border: solid 2px var(--pinkTCD);
   border-radius: 50px;
   color: var(--whiteTCD);
+  cursor: pointer;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0.7rem 1.2rem;
@@ -1733,3 +1866,9 @@ span {
   border: solid 2px var(--greenTCD);
   text-decoration: none;
 }
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.box-inactive {
+  display: none;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

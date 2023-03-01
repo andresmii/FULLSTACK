@@ -10,14 +10,9 @@
     <link rel="preload" href="css/styles.css" as="styles" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Tu Carrera Digital - Zona Centro</title>
-    <!-- <style>
-      h1 {
-        color: #214adf;
-      }
-    </style> -->
   </head>
   <body>
-    <header>
+    <header id="start">
       <nav class="contenedor">
         <div class="nav-login">
           <a class="login" href="#">Login Alumnos</a>
@@ -34,15 +29,19 @@
           </div>
           <div class="nav-list">
             <a class="list" href="#">Cursos</a>
-            <a class="list" href="#">Sobre Nosotros</a>
-            <a class="list info-button" href="#">Infórmate</a>
+            <a
+              class="list"
+              href="https://www.tucarreradigital.es/sobre-nosotros"
+              >Sobre Nosotros</a
+            >
+            <a class="list info-button show-modal">Infórmate</a>
           </div>
         </div>
       </nav>
     </header>
 
     <div class="informate">
-      <a href="#">
+      <a class="show-modal" href="#">
         <img src="img/zona-centro/CTA-informate.png" alt="informate-icon" />
       </a>
     </div>
@@ -80,25 +79,53 @@
       </div>
     </section>
 
-    <section class="section section-cursos-location">
+    <section
+      class="section section-cursos-location"
+      id="section-cursos-location"
+    >
       <div class="cursos-location-menu-box contenedor">
         <div class="cursos-location-menu">
-          <a class="cursos-location-box active" href="#">VER TODO</a>
-          <a class="cursos-location-box" href="#">ALCOBENDAS Y LA MORALEJA</a>
-          <a class="cursos-location-box" href="#">CARBAJOSA DE LA SAGRADA</a>
-          <a class="cursos-location-box" href="#">MADRID</a>
-          <a class="cursos-location-box" href="#">POZUELO DE ALARCÓN</a>
+          <a
+            class="cursos-location-box tab-location tab-0 active"
+            href="#section-cursos-location"
+            data-filter="all"
+            >VER TODO</a
+          >
+          <a
+            class="cursos-location-box tab-location tab-1"
+            href="#section-cursos-location"
+            data-filter="filter1"
+            >ALCOBENDAS Y LA MORALEJA</a
+          >
+          <a
+            class="cursos-location-box tab-location tab-2"
+            href="#section-cursos-location"
+            data-filter="filter2"
+            >CARBAJOSA DE LA SAGRADA</a
+          >
+          <a
+            class="cursos-location-box tab-location tab-3"
+            href="#section-cursos-location"
+            data-filter="filter3"
+            >MADRID</a
+          >
+          <a
+            class="cursos-location-box tab-location tab-4"
+            href="#section-cursos-location"
+            data-filter="filter4"
+            >POZUELO DE ALARCÓN</a
+          >
         </div>
         <div class="cursos-box">
-          <div class="box box-1">
+          <div class="box box-1 filter1 filter3">
             <h2>MARKETING DIGITAL</h2>
             <a class="inscribirme-box" href="#">INSCRIBIRME</a>
           </div>
-          <div class="box box-2">
+          <div class="box box-2 filter1 filter2 filter3">
             <h2>PROGRAMACIÓN DE VIDEOJUEGOS, DISEÑO 3D Y REALIDAD VIRTUAL</h2>
             <a class="inscribirme-box" href="#">INSCRIBIRME</a>
           </div>
-          <div class="box box-3">
+          <div class="box box-3 filter2 filter4">
             <h2>PROGRAMACIÓN WEB FULL STACK</h2>
             <a class="inscribirme-box" href="#">INSCRIBIRME</a>
           </div>
@@ -112,7 +139,7 @@
           <strong>¿TE INTERESA ALGÚN OTRO CURSO EN TU CIUDAD?</strong>
         </h3>
         <div class="intereses-btn">
-          <a class="btn-pide" href="#">¡PÍDENOSLO!</a>
+          <a class="btn-pide show-modal" href="#">¡PÍDENOSLO!</a>
         </div>
       </div>
     </section>
@@ -232,7 +259,7 @@
       <div class="contenedor">
         <div class="contactar-title-subtitle">
           <h3 class="contactar-title">CONTACTAR</h3>
-          <h2 class="contactar-subtitle">¿TIENES DUDAS? HABLA CON NOSTROS:</h2>
+          <h2 class="contactar-subtitle">¿TIENES DUDAS? HABLA CON NOSOTROS:</h2>
         </div>
         <div class="contactar-div">
           <div class="contactar-div-individual">
@@ -292,27 +319,117 @@
       </div>
     </footer>
 
-    <div class="modal hidden">
-      <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">
-        Open your bank account <br />
-        in just <span class="highlight">5 minutes</span>
-      </h2>
+    <div class="form-modal modal hidden">
+      <button class="close-modal"></button>
+      <div class="form-banner">
+        <img src="img/download.png" alt="banner-logos" />
+      </div>
       <form class="modal__form">
-        <label>First Name</label>
-        <input type="text" />
-        <label>Last Name</label>
-        <input type="text" />
-        <label>Email Address</label>
-        <input type="email" />
-        <button class="btn">Next step &rarr;</button>
+        <div class="modal-info">
+          <h2 class="modal__header">Impulsa tu futuro profesional</h2>
+          <p>¿Qué formación te interesa?</p>
+          <p>
+            Con esta solicitud recogemos tu interés en los programas formativos
+            que más te interesen. En cuanto estén confirmadas las fechas de
+            inicio contactaremos contigo para que puedas realizar tu
+            inscripción.
+          </p>
+          <p>
+            Recuerda que es importante que cumplas los requisitos. Aprovecha
+            esta oportunidad!
+          </p>
+        </div>
+        <input
+          class="nombre-form"
+          type="text"
+          placeholder="Nombre"
+          required
+        /><span>*</span>
+        <input
+          class="apellido-form"
+          type="text"
+          placeholder="Primer Apellido"
+          required
+        /><span>*</span>
+        <input
+          class="apellido-form"
+          type="text"
+          placeholder="Segundo Apellido"
+        />
+        <input
+          class="dob-form"
+          type="text"
+          placeholder="Fecha de Nacimiento (dd/MM/yyyy)"
+          required
+        /><span>*</span>
+        <input class="tel-form" type="tel" placeholder="Teléfono" />
+        <input
+          class="email-form"
+          type="email"
+          placeholder="Email"
+          required
+        /><span>*</span>
+        <div class="ciudad-form">
+          <select name="ciudad" id="select-ciudad" required>
+            <option class="ciudad-option" value="0">
+              Seleccione la ciudad
+            </option>
+            <option class="ciudad-option" value="1">León</option>
+            <option class="ciudad-option" value="2">Madrid</option>
+            <option class="ciudad-option" value="3">Salamanca</option>
+            <option class="ciudad-option" value="4">Valladolid</option>
+            <option class="ciudad-option" value="5">Zaragoza</option></select
+          ><span>*</span>
+        </div>
+        <div class="programa-form">
+          <label for="programa">Programa:<span>*</span></label>
+          <select id="programa" name="" id="" required>
+            <option value=""></option>
+            <option value="">Marketing</option>
+            <option value="">Programación de Videojuegos</option>
+            <option value="">Programación Full Stack</option>
+          </select>
+        </div>
+        <textarea
+          class="observaciones"
+          name=""
+          id=""
+          cols="30"
+          rows="5"
+          placeholder="Observaciones..."
+        ></textarea>
+        <div class="tyc">
+          <p>Los campos marcados con (*) son obligatorios</p>
+          <div class="tyc-accept">
+            <input type="checkbox" required />
+            <p>
+              He leído y acepto la
+              <a
+                href="https://www.tucarreradigital.es/zona-centro/politica-de-privacidad"
+                >política de privacidad</a
+              ><span>*</span>
+            </p>
+          </div>
+          <p>
+            Para realizar estos programas gratuitos financiados por el Fondo
+            Social Europeo es necesario que en el momento de la formación
+            cumplas los siguientes requisitos:
+          </p>
+          <p>-Tener entre 16 y 30 años</p>
+          <p>-Estar registrado en el Sistema Nacional de Garantía Juvenil</p>
+        </div>
+        <div class="btn-submit">
+          <button class="btn" type="submit">Enviar</button>
+        </div>
       </form>
     </div>
     <div class="overlay hidden"></div>
 
-    <a href="#" class="scroll-to-top"> </a>
+    <a href="#start" id="scroll-to-top"></a>
     <div>
       <a class="cookies-btn" href="#"></a>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
