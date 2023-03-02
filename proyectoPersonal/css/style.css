@@ -271,32 +271,5 @@ header {
 }
 
 /* ////////////////////////////////////////////////////// */
-/* Border from Y to X  */
-.borderYtoX a:before,
-.borderYtoX a:after {
-  position: absolute;
-  opacity: 0.5;
-  height: 100%;
-  width: 2px;
-  content: "";
-  background: #fff;
-  transition: all 0.3s;
-}
 
-.borderYtoX a:before {
-  left: 0px;
-  top: 0px;
-}
-
-.borderYtoX a:after {
-  right: 0px;
-  bottom: 0px;
-}
-
-.borderYtoX a:hover:before,
-.borderYtoX a:hover:after {
-  opacity: 1;
-  height: 2px;
-  width: 100%;
-}
 /* ////////////////////////////////////////////////////// */

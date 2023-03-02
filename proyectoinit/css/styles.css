@@ -217,65 +217,6 @@ body {
     margin: 0 auto 0 auto;
   }
 
-  /* SECTION MAIN */
-  .section {
-    margin: 0;
-    width: 100%;
-  }
-
-  .main-section {
-    background-image: url("../img/11641893944_banner_zona_centro.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-  }
-
-  .main-section-div {
-    padding: 5% 5% 10% 5%;
-  }
-
-  .main-section-div-el {
-    max-width: 80%;
-    width: 600px;
-    padding: 0 15px 0 15px;
-    margin: 0 0;
-    border: none;
-  }
-
-  .texto {
-    background-color: var(--transparenteRedTCD);
-    color: var(--whiteTCD);
-    display: block;
-    font-size: 47px;
-    font-weight: 800;
-    padding: 35px;
-    max-width: 700px;
-    margin: 0 0 1.5rem 0;
-  }
-
-  a.ver-cursos {
-    background: #000 url("../img/zona-centro/ico-flecha-derecha-white.png")
-      no-repeat right 20px center;
-    border: solid 2px #000;
-    border-radius: 0px;
-    color: var(--whiteTCD);
-    float: right;
-    font-size: 1.7rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    padding: 23px 90px 23px 90px;
-  }
-
-  a.ver-cursos:hover {
-    background: var(--whiteTCD)
-      url("../img/zona-centro/ico-flecha-derecha-red.png") no-repeat right 20px
-      center;
-    border: solid 2px var(--pinkTCD);
-    color: var(--pinkTCD);
-  }
-
   /* SECTION LOGOS UE/ADECCO */
   .logo-section {
     display: flex;
@@ -1768,10 +1709,8 @@ body {
   }
 }
 
-/* ------------------------------ */
-/* ----- VIEWPORT 480PX ----- */
-
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* SECTION HEADER */
 header {
   display: flex;
@@ -1865,6 +1804,65 @@ span {
   background-color: var(--greenTCD);
   border: solid 2px var(--greenTCD);
   text-decoration: none;
+}
+
+/* SECTION MAIN */
+.section {
+  margin: 0;
+  width: 100%;
+}
+
+.main-section {
+  background-image: url("../img/11641893944_banner_zona_centro.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.main-section-div {
+  padding: 5% 5% 10% 5%;
+}
+
+.main-section-div-el {
+  max-width: 80%;
+  width: 600px;
+  padding: 0 15px 0 15px;
+  margin: 0 0;
+  border: none;
+}
+
+.texto {
+  background-color: var(--transparenteRedTCD);
+  color: var(--whiteTCD);
+  display: block;
+  font-size: 47px;
+  font-weight: 800;
+  padding: 35px;
+  max-width: 700px;
+  margin: 0 0 1.5rem 0;
+}
+
+a.ver-cursos {
+  background: #000 url("../img/zona-centro/ico-flecha-derecha-white.png")
+    no-repeat right 20px center;
+  border: solid 2px #000;
+  border-radius: 0px;
+  color: var(--whiteTCD);
+  float: right;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: 23px 90px 23px 90px;
+}
+
+a.ver-cursos:hover {
+  background: var(--whiteTCD)
+    url("../img/zona-centro/ico-flecha-derecha-red.png") no-repeat right 20px
+    center;
+  border: solid 2px var(--pinkTCD);
+  color: var(--pinkTCD);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
