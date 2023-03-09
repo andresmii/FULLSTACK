@@ -1,0 +1,205 @@
+:root {
+  --black: #000000;
+
+  --darkBlue: #082032;
+  --darkBlueTransparent: #08203299;
+
+  --grayBlue: #334756;
+  --blue: #0081c9;
+  --skyBlue: #5bc0f8;
+  --lightBlue: #86e5ff;
+
+  --darkYellow: #f0a500;
+  --yellow: #ffc93c;
+
+  --neonGreen: #a1e423;
+  --brightGreen: #cbfd6e;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  margin: 0;
+}
+
+body {
+  background: var(--lightBlue);
+  color: var(--black);
+  font-size: 16px;
+  margin: 0;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+
+header {
+  background: var(--neonGreen);
+  height: 9rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 700;
+}
+
+.header {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.logo-div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-div a img {
+  height: auto;
+  width: 7rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 12/17;
+}
+
+.navbar div {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: capitalize;
+  width: auto;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+
+.hero {
+  background-image: url("../img/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  height: 50rem;
+}
+
+.hero-div {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-title {
+  background-color: #00000096;
+  border-radius: 2rem;
+  color: var(--brightGreen);
+  font-size: 4.8rem;
+  grid-column: 2/3;
+  margin: 0;
+  padding: 2rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.hero-text {
+  background-color: #00000096;
+  border-radius: 2rem;
+  color: var(--brightGreen);
+  font-size: 2rem;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+
+.envio-section {
+  padding: 7rem 0;
+  background: var(--brightGreen);
+}
+
+.paso1,
+.paso2 {
+  border: 0.2rem solid var(--grayBlue);
+  padding: 3rem;
+}
+
+.paso-info {
+  align-items: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+  margin: 0.5rem 0;
+  width: 45%;
+}
+
+.paso-info h2,
+.paso-info h3 {
+  font-size: 4rem;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.paso-info h2 {
+  font-weight: bolder;
+}
+
+.paso-info h3 {
+  font-weight: 200;
+}
+
+.paso-input {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  margin: 0.5rem 0;
+  text-transform: lowercase;
+  width: 50%;
+}
+
+.paso-input label {
+  height: 2rem;
+}
+
+#codigo-postal {
+  font-size: 2rem;
+  height: 5rem;
+  width: 30%;
+  border-radius: 1rem 1rem 0 0;
+}

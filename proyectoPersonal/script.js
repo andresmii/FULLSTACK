@@ -2,7 +2,7 @@
 
 const burgerMenu = document.getElementById("myLinks");
 
-function myFunction() {
+function openBurgerMenu() {
   if (burgerMenu.style.display === "block") {
     burgerMenu.style.display = "none";
   } else {
@@ -10,28 +10,63 @@ function myFunction() {
   }
 }
 
-let d = 20;
-let r = d / 2;
-let area = Math.round(Math.PI * Math.pow(r, 2));
-console.log(area);
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
 
-let random = Math.random() + 2;
-console.log(random);
+// const prod = {
+//   prodName: `Alpargatas NIKE`,
+//   price: 80,
+//   available: true,
+// };
 
-let dice = Math.trunc(Math.random() * 6 + 1);
-console.log(dice);
+// const isInStock = function () {
+//   if (prod.available === true) return `available`;
+//   else return `not available`;
+// };
+// const stock = isInStock();
 
-let x = 120;
-let y = 85;
-let z = 24;
-let sum = x + y + z;
-let discount = 0.4;
+// console.log(
+//   `The product's name is ${prod.prodName}, with a price of ${prod.price} € and it's ${stock} right now`
+// );
 
-let price = function (cost) {
-  return cost * (1 - discount);
-};
-console.log(
-  `the full price of the objects is ${sum}€, with a ${
-    discount * 100
-  }% discount the final price will be ${price(sum)}€`
-);
+// prod.img = `img.jpg`;
+// delete prod.img;
+
+// prod.category = `shoes`;
+
+// const { category } = prod;
+
+// Object.freeze(prod);
+
+// // prod.size = 42;
+
+// console.log(Object.isFrozen(prod));
+
+// // prod.available = false;
+
+// const measure = {
+//   length: 20,
+//   width: 10,
+//   height: 15,
+//   weight: 25,
+// };
+
+// Object.seal(measure);
+// console.log(Object.isSealed(measure));
+
+// measure.width = 12;
+// console.log(measure);
+
+///////////////////////////////////
+///////////////////////////////////
+// arrays
+
+// let nums = [23, 54, 89, 12, 25, 16, 63, 74];
+// console.log(nums);
+// console.log(`index [5]: ${nums[5]}`);
+// nums.sort();
+// console.log(nums, nums.length);
+// console.table(nums);
+// console.log(nums.indexOf(54));
+// console.log(nums.includes(54));

@@ -594,7 +594,7 @@ div.borderXwidth a:hover:after {
     justify-content: center;
   }
 
-  .product-display a img {
+  .product-display a .img-grid-view {
     width: 15rem;
   }
 }

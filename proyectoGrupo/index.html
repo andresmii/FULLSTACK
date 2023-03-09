@@ -4,27 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto Grupal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="css/styles.css" as="styles" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>BlaBlaBox</title>
   </head>
   <body>
     <header>
       <div class="header container">
         <div class="logo-div">
-          <a href=""><img class="logo" src="" alt="logo" /></a>
+          <a href="index.html"
+            ><img class="logo" src="img/coche.png" alt="logo"
+          /></a>
         </div>
         <div class="navbar">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div>
-          <a href=""><span></span></a>
-          <a href=""><span></span></a>
-          <a href=""><span></span></a>
+          <div class="search-bar">
+            <a href="">
+              <img src="img/search.png" alt="search icon" /> busca tu viaje</a
+            >
+          </div>
+          <div class="add-bar">
+            <a href="">
+              <img src="img/add-button.png" alt="plus icon" /> publica un
+              viaje</a
+            >
+          </div>
+          <div class="user-bar">
+            <a href="">
+              <img src="img/user.png" alt="user icon" />
+            </a>
+          </div>
         </div>
       </div>
     </header>
+
+    <section class="hero">
+      <div class="container hero-div">
+        <h1 class="hero-title">
+          envia como quieras! <br />
+          envia donde quieras!
+        </h1>
+        <p class="hero-text">tus envios como quieras y donde quieras!</p>
+      </div>
+    </section>
+
+    <section class="envio-section">
+      <div class="container">
+        <div class="paso1">
+          <div class="paso-info">
+            <h2>paso 1</h2>
+            <h3>destino</h3>
+          </div>
+          <div class="paso-input">
+            <label for="codigo-postal">¿donde quieres realizar el envio?</label>
+            <input type="text" name="codigo-postal" id="codigo-postal" />
+          </div>
+        </div>
+        <div class="paso2">
+          <div class="paso-info">
+            <h2>paso 2</h2>
+            <h3>paquete</h3>
+          </div>
+          <div class="paso-display">
+            <label for=""></label>
+            <div class="paquete-size"><img src="" alt="" /></div>
+            <div class="paquete-size"><img src="" alt="" /></div>
+            <div class="paquete-size"><img src="" alt="" /></div>
+            <div class="paquete-size"><img src="" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
