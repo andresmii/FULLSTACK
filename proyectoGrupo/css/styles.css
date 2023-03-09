@@ -1,13 +1,14 @@
 :root {
   --black: #000000;
+  --white: #fffce2;
 
   --darkBlue: #082032;
   --darkBlueTransparent: #08203299;
 
   --grayBlue: #334756;
   --blue: #0081c9;
-  --skyBlue: #5bc0f8;
-  --lightBlue: #86e5ff;
+  --skyBlue: #a0d9f8;
+  --lightBlue: #c0f1ff;
 
   --darkYellow: #f0a500;
   --yellow: #ffc93c;
@@ -43,7 +44,7 @@ body {
 /* //////////////////////////////////////////////////////////////// */
 
 header {
-  background: var(--neonGreen);
+  background: var(--lightBlue);
   height: 9rem;
   margin: 0;
   padding: 0;
@@ -66,8 +67,10 @@ header {
 }
 
 .logo-div a img {
+  display: flex;
+  align-items: center;
   height: auto;
-  width: 7rem;
+  width: 12rem;
 }
 
 .navbar {
@@ -122,8 +125,10 @@ header {
 .hero-title {
   background-color: #00000096;
   border-radius: 2rem;
-  color: var(--brightGreen);
+  color: var(--white);
+  font-family: "Tilt Warp", cursive;
   font-size: 4.8rem;
+  font-weight: 1000;
   grid-column: 2/3;
   margin: 0;
   padding: 2rem;
@@ -134,7 +139,7 @@ header {
 .hero-text {
   background-color: #00000096;
   border-radius: 2rem;
-  color: var(--brightGreen);
+  color: var(--white);
   font-size: 2rem;
   grid-column: 2/3;
   grid-row: 2/3;
@@ -150,56 +155,78 @@ header {
 
 .envio-section {
   padding: 7rem 0;
-  background: var(--brightGreen);
+  background: var(--lightBlue);
 }
 
-.paso1,
-.paso2 {
-  border: 0.2rem solid var(--grayBlue);
-  padding: 3rem;
-}
-
-.paso-info {
-  align-items: end;
+.envio-bar {
+  align-items: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-content: space-around;
-  margin: 0.5rem 0;
-  width: 45%;
-}
-
-.paso-info h2,
-.paso-info h3 {
-  font-size: 4rem;
-  margin: 0;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.paso-info h2 {
-  font-weight: bolder;
-}
-
-.paso-info h3 {
-  font-weight: 200;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
 }
 
 .paso-input {
-  display: grid;
-  grid-template-rows: 1fr 2fr;
+  align-items: center;
+  background: var(--skyBlue);
+  border: 0.2rem solid var(--black);
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
   margin: 0.5rem 0;
-  text-transform: lowercase;
-  width: 50%;
+  padding: 1rem;
 }
 
 .paso-input label {
-  height: 2rem;
+  height: 1.8rem;
 }
 
 #codigo-postal {
-  font-size: 2rem;
-  height: 5rem;
-  width: 30%;
   border-radius: 1rem 1rem 0 0;
+  font-size: 1.6rem;
+  height: 3rem;
+  text-align: center;
+  width: 30%;
+}
+
+.paso-display {
+  align-items: center;
+  background: var(--skyBlue);
+  border: 0.2rem solid var(--black);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+  padding: 1rem;
+}
+
+/* .paso-display form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
+.paso-display label {
+  display: flex;
+  align-items: center;
+}
+
+.choose-size {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.paquete-size {
+  text-align: center;
+}
+
+.paquete-size h6 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.paquete-size p {
+  font-size: 1.2rem;
+  margin: 0;
+  text-transform: capitalize;
 }

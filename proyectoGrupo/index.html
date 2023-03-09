@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Tilt+Warp&display=swap"
       rel="stylesheet"
     />
     <link rel="preload" href="css/styles.css" as="styles" />
@@ -19,7 +19,7 @@
       <div class="header container">
         <div class="logo-div">
           <a href="index.html"
-            ><img class="logo" src="img/coche.png" alt="logo"
+            ><img class="logo" src="img/BlablaBox_logo.png" alt="logo"
           /></a>
         </div>
         <div class="navbar">
@@ -45,38 +45,53 @@
 
     <section class="hero">
       <div class="container hero-div">
-        <h1 class="hero-title">
-          envia como quieras! <br />
-          envia donde quieras!
-        </h1>
-        <p class="hero-text">tus envios como quieras y donde quieras!</p>
+        <h1 class="hero-title">lleva tus paquetes a donde quieras</h1>
+        <p class="hero-text"></p>
       </div>
     </section>
 
     <section class="envio-section">
-      <div class="container">
-        <div class="paso1">
-          <div class="paso-info">
-            <h2>paso 1</h2>
-            <h3>destino</h3>
-          </div>
-          <div class="paso-input">
-            <label for="codigo-postal">¿donde quieres realizar el envio?</label>
-            <input type="text" name="codigo-postal" id="codigo-postal" />
-          </div>
+      <div class="container envio-bar">
+        <div class="paso-input">
+          <form for="codigo-postal" action="">
+            <label for="codigo-postal">¿Dónde quieres realizar el envío?</label>
+            <input
+              type="text"
+              name="codigo-postal"
+              id="codigo-postal"
+              pattern="[0-9]{5}"
+              title="Código Postal de 5 dígitos"
+              placeholder="Código Postal*"
+              required
+            />
+          </form>
         </div>
-        <div class="paso2">
-          <div class="paso-info">
-            <h2>paso 2</h2>
-            <h3>paquete</h3>
-          </div>
-          <div class="paso-display">
-            <label for=""></label>
-            <div class="paquete-size"><img src="" alt="" /></div>
-            <div class="paquete-size"><img src="" alt="" /></div>
-            <div class="paquete-size"><img src="" alt="" /></div>
-            <div class="paquete-size"><img src="" alt="" /></div>
-          </div>
+        <div class="paso-display">
+          <form for="paquete-size" action="">
+            <label for="paquete-size">¿Qué tamaño y peso tiene?</label>
+            <div class="choose-size">
+              <div class="paquete-size">
+                <img src="" alt="" />
+                <h6>hasta 2kg</h6>
+                <p>dimensiones: 30x20x20</p>
+              </div>
+              <div class="paquete-size">
+                <img src="" alt="" />
+                <h6>hasta 5kg</h6>
+                <p>dimensiones: 35x35x24</p>
+              </div>
+              <div class="paquete-size">
+                <img src="" alt="" />
+                <h6>hasta 10kg</h6>
+                <p>dimensiones: 40x40x37</p>
+              </div>
+              <div class="paquete-size">
+                <img src="" alt="" />
+                <h6>hasta 20kg</h6>
+                <p>dimensiones: 55x55x39</p>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
