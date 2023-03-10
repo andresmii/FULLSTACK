@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/BlablaBox_logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,54 +47,86 @@
     <section class="hero">
       <div class="container hero-div">
         <h1 class="hero-title">lleva tus paquetes a donde quieras</h1>
-        <p class="hero-text"></p>
+        <!-- <p class="hero-text"></p> -->
       </div>
     </section>
 
     <section class="envio-section">
       <div class="container envio-bar">
-        <div class="paso-input">
-          <form for="codigo-postal" action="">
-            <label for="codigo-postal">¿Dónde quieres realizar el envío?</label>
-            <input
-              type="text"
-              name="codigo-postal"
-              id="codigo-postal"
-              pattern="[0-9]{5}"
-              title="Código Postal de 5 dígitos"
-              placeholder="Código Postal*"
-              required
-            />
-          </form>
-        </div>
-        <div class="paso-display">
-          <form for="paquete-size" action="">
-            <label for="paquete-size">¿Qué tamaño y peso tiene?</label>
-            <div class="choose-size">
-              <div class="paquete-size">
-                <img src="" alt="" />
-                <h6>hasta 2kg</h6>
-                <p>dimensiones: 30x20x20</p>
+        <form action="">
+          <h2>Realiza un envío:</h2>
+          <div class="paso-input">
+            <form for="codigo-postal" action="">
+              <label for="codigo-postal"
+                >¿Dónde quieres realizar el envío?</label
+              >
+              <input
+                type="text"
+                name="codigo-postal"
+                id="codigo-postal"
+                pattern="[0-9]{5}"
+                title="Código Postal de 5 dígitos"
+                placeholder="Código Postal*"
+                required
+              />
+            </form>
+          </div>
+          <div class="paso-display">
+            <form for="paquete-size" action="">
+              <label for="paquete-size">¿Qué tamaño y peso tiene?</label>
+              <div class="choose-size">
+                <div class="paquete-size">
+                  <img src="img/Notebook_BBB_.png" alt="max 2kg" />
+                  <h6>hasta 2kg</h6>
+                  <p>dimensiones: 30x20x20</p>
+                </div>
+                <div class="paquete-size">
+                  <img src="img/Zupi_BBB_.png" alt="max 5kg" />
+                  <h6>hasta 5kg</h6>
+                  <p>dimensiones: 35x35x24</p>
+                </div>
+                <div class="paquete-size">
+                  <img src="img/Casco_BBB_.png" alt="max 10kg" />
+                  <h6>hasta 10kg</h6>
+                  <p>dimensiones: 40x40x37</p>
+                </div>
+                <div class="paquete-size">
+                  <img src="img/Maleta_BBB_.png" alt="max 20kg" />
+                  <h6>hasta 20kg</h6>
+                  <p>dimensiones: 55x55x39</p>
+                </div>
               </div>
-              <div class="paquete-size">
-                <img src="" alt="" />
-                <h6>hasta 5kg</h6>
-                <p>dimensiones: 35x35x24</p>
-              </div>
-              <div class="paquete-size">
-                <img src="" alt="" />
-                <h6>hasta 10kg</h6>
-                <p>dimensiones: 40x40x37</p>
-              </div>
-              <div class="paquete-size">
-                <img src="" alt="" />
-                <h6>hasta 20kg</h6>
-                <p>dimensiones: 55x55x39</p>
-              </div>
-            </div>
-          </form>
-        </div>
+            </form>
+          </div>
+          <input
+            class="iniciar-envio disabled"
+            type="submit"
+            value="Iniciar Envío"
+            disabled
+          />
+        </form>
       </div>
     </section>
+
+    <footer>
+      <div class="site-map container">
+        <ul>
+          <li><a href="">busca un viaje</a></li>
+          <li><a href="">publica un viaje</a></li>
+          <li><a href="">iniciar sesión / registro</a></li>
+        </ul>
+        <div class="socials">
+          <a href=""><img src="img/instagram.png" alt="" /></a>
+          <a href=""><img src="img/twitter.png" alt="" /></a>
+          <a href=""><img src="img/whatsapp.png" alt="" /></a>
+          <a href=""><img src="img/linkedin.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="copyright container">
+        <p>
+          © creado por: <a href="https://github.com/andresmii">@andresmii</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

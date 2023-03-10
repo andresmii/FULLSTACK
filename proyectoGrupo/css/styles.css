@@ -1,17 +1,19 @@
 :root {
   --black: #000000;
+  --lightGray: #e0e0e0;
   --white: #fffce2;
 
   --darkBlue: #082032;
   --darkBlueTransparent: #08203299;
 
-  --grayBlue: #334756;
+  --grayBlue: #6c9abe;
   --blue: #0081c9;
   --skyBlue: #a0d9f8;
   --lightBlue: #c0f1ff;
 
   --darkYellow: #f0a500;
   --yellow: #ffc93c;
+  --paleYellow: #fde3a2;
 
   --neonGreen: #a1e423;
   --brightGreen: #cbfd6e;
@@ -28,7 +30,7 @@ html {
 
 body {
   background: var(--lightBlue);
-  color: var(--black);
+  color: var(--darkBlue);
   font-size: 16px;
   margin: 0;
   width: 100%;
@@ -45,9 +47,11 @@ body {
 
 header {
   background: var(--lightBlue);
+  border-bottom: 0.2rem solid var(--darkBlueTransparent);
   height: 9rem;
   margin: 0;
   padding: 0;
+  position: fixed;
   width: 100%;
   z-index: 700;
 }
@@ -93,6 +97,10 @@ header {
   width: auto;
 }
 
+.navbar div img {
+  padding: 0 0.5rem;
+}
+
 .navbar a {
   display: flex;
   align-items: center;
@@ -110,7 +118,9 @@ header {
   background-position: top;
   background-size: cover;
   display: flex;
-  height: 50rem;
+  height: 40vw;
+  position: relative;
+  top: 9rem;
 }
 
 .hero-div {
@@ -154,30 +164,50 @@ header {
 /* //////////////////////////////////////////////////////////////// */
 
 .envio-section {
-  padding: 7rem 0;
   background: var(--lightBlue);
+  padding: 7rem 0;
+  position: relative;
+  top: 9rem;
 }
 
 .envio-bar {
-  align-items: center;
+  background: var(--skyBlue);
+  border: 0.2rem solid var(--black);
+  border-radius: 2rem;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 2rem;
   justify-content: center;
+  padding: 5rem 1rem;
+  width: 55%;
+}
+
+.envio-bar h2 {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 2rem 0;
 }
 
 .paso-input {
   align-items: center;
-  background: var(--skyBlue);
+  background: var(--lightBlue);
   border: 0.2rem solid var(--black);
   border-radius: 4rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: 0.5rem 0;
   padding: 1rem;
 }
 
+.paso-input form {
+  display: flex;
+  justify-content: space-around;
+}
+
 .paso-input label {
-  height: 1.8rem;
+  align-items: center;
+  display: flex;
+  font-weight: 600;
 }
 
 #codigo-postal {
@@ -190,7 +220,7 @@ header {
 
 .paso-display {
   align-items: center;
-  background: var(--skyBlue);
+  background: var(--lightBlue);
   border: 0.2rem solid var(--black);
   border-radius: 2rem;
   display: flex;
@@ -199,28 +229,42 @@ header {
   padding: 1rem;
 }
 
-/* .paso-display form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
-
 .paso-display label {
   display: flex;
   align-items: center;
+  padding: 2rem 1rem;
+  font-weight: 600;
 }
 
 .choose-size {
   display: grid;
+  grid-column-gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
+  padding: 2rem 1rem;
 }
 
 .paquete-size {
+  align-items: center;
+  background: var(--skyBlue);
+  border: 0.15rem solid var(--black);
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-rows: 5fr 1fr 1fr;
+  justify-content: center;
+  padding: 0.5rem 1rem;
   text-align: center;
+}
+
+.paquete-size img {
+  justify-self: center;
+  display: flex;
+  height: auto;
+  width: 10rem;
 }
 
 .paquete-size h6 {
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
   text-transform: capitalize;
 }
@@ -229,4 +273,76 @@ header {
   font-size: 1.2rem;
   margin: 0;
   text-transform: capitalize;
+}
+
+.iniciar-envio {
+  background: var(--yellow);
+  border: 0.2rem solid var(--black);
+  border-radius: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  justify-self: center;
+  padding: 1.5rem;
+  text-transform: uppercase;
+  width: auto;
+}
+
+.disabled {
+  background: var(--paleYellow);
+}
+
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+
+footer {
+  background: var(--grayBlue);
+  margin: 0;
+  position: relative;
+  top: 9rem;
+  width: 100%;
+}
+
+.site-map {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.site-map ul {
+  list-style: none;
+  margin: 0;
+  padding: 4rem 2rem;
+  text-transform: capitalize;
+  line-height: 2.5rem;
+}
+
+.site-map a {
+  color: var(--darkBlue);
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding: 4rem 2rem;
+}
+
+.socials a {
+  margin: 0 0.5rem;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  text-decoration: none;
+}
+
+.copyright a,
+.copyright p {
+  color: var(--lightGray);
+  font-size: 1.4rem;
+  margin: 0;
+  text-decoration: none;
 }
