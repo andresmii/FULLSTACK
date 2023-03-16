@@ -46,67 +46,102 @@
 
     <section class="hero">
       <div class="container hero-div">
-        <h1 class="hero-title">lleva tus paquetes a donde quieras</h1>
+        <h1 class="hero-title">enviar tus paquetes nunca fue tan fácil</h1>
         <!-- <p class="hero-text"></p> -->
+        <div class="btns">
+          <a href="#" class="envia-btn">envia</a>
+          <a href="#" class="publica-btn">publica</a>
+        </div>
       </div>
     </section>
 
-    <section class="envio-section">
-      <div class="container envio-bar">
+    <section class="main container">
+      <div class="searchEnvioBar">
         <form action="">
-          <h2>Realiza un envío:</h2>
-          <div class="paso-input">
-            <form for="codigo-postal" action="">
-              <label for="codigo-postal"
-                >¿Dónde quieres realizar el envío?</label
-              >
-              <input
-                type="text"
-                name="codigo-postal"
-                id="codigo-postal"
-                pattern="[0-9]{5}"
-                title="Código Postal de 5 dígitos"
-                placeholder="Código Postal*"
-                required
-              />
-            </form>
+          <div class="destinoEnvioBar">
+            <input list="destinos" name="myDestino" placeholder="A dónde va?" />
+            <datalist id="destinos">
+              <option value="Barcelona"></option>
+              <option value="Madrid"></option>
+              <option value="Sevilla"></option>
+              <option value="Valencia"></option>
+              <option value="Zaragoza"></option>
+            </datalist>
           </div>
-          <div class="paso-display">
-            <form for="paquete-size" action="">
-              <label for="paquete-size">¿Qué tamaño y peso tiene?</label>
-              <div class="choose-size">
-                <div class="paquete-size">
-                  <img src="img/Notebook_BBB_.png" alt="max 2kg" />
-                  <h6>hasta 2kg</h6>
-                  <p>dimensiones: 30x20x20</p>
-                </div>
-                <div class="paquete-size">
-                  <img src="img/Zupi_BBB_.png" alt="max 5kg" />
-                  <h6>hasta 5kg</h6>
-                  <p>dimensiones: 35x35x24</p>
-                </div>
-                <div class="paquete-size">
-                  <img src="img/Casco_BBB_.png" alt="max 10kg" />
-                  <h6>hasta 10kg</h6>
-                  <p>dimensiones: 40x40x37</p>
-                </div>
-                <div class="paquete-size">
-                  <img src="img/Maleta_BBB_.png" alt="max 20kg" />
-                  <h6>hasta 20kg</h6>
-                  <p>dimensiones: 55x55x39</p>
-                </div>
-              </div>
-            </form>
+          <div class="fechaEnvioBar">
+            <input type="date" id="datePickerId" />
           </div>
-          <input
-            class="iniciar-envio disabled"
-            type="submit"
-            value="Iniciar Envío"
-            disabled
-          />
+          <div class="paqueteEnvioBar">
+            <input list="weight" name="myWeight" placeholder="Cuánto pesa?" />
+            <datalist id="weight">
+              <option value="2-5kg"></option>
+              <option value="5-10kg"></option>
+              <option value="+10kg"></option>
+            </datalist>
+          </div>
+          <input type="submit" value="Vamos!" class="vamos" />
         </form>
       </div>
     </section>
+
+    <!-- <section class="envio-section">
+      <div class="container envio-bar">
+        <form action="">
+          <fieldset>
+            <h2>Realiza un envío:</h2>
+            <div class="paso-input">
+                <label for="codigo-postal"
+                  >¿Dónde quieres realizar el envío?</label
+                >
+                <input
+                  type="text"
+                  name="codigo-postal"
+                  id="codigo-postal"
+                  pattern="[0-9]{5}"
+                  title="Código Postal de 5 dígitos"
+                  placeholder="Código Postal*"
+                  required
+                />
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="paso-display">
+                <label for="paquete-size">¿Qué tamaño y peso tiene?</label>
+                <div class="choose-size">
+                  <div class="paquete-size">
+                    <img src="img/Notebook_BBB_.png" alt="max 2kg" />
+                    <h6>hasta 2kg</h6>
+                    <p>dimensiones: 30x20x20</p>
+                  </div>
+                  <div class="paquete-size">
+                    <img src="img/Zupi_BBB_.png" alt="max 5kg" />
+                    <h6>hasta 5kg</h6>
+                    <p>dimensiones: 35x35x24</p>
+                  </div>
+                  <div class="paquete-size">
+                    <img src="img/Casco_BBB_.png" alt="max 10kg" />
+                    <h6>hasta 10kg</h6>
+                    <p>dimensiones: 40x40x37</p>
+                  </div>
+                  <div class="paquete-size">
+                    <img src="img/Maleta_BBB_.png" alt="max 20kg" />
+                    <h6>hasta 20kg</h6>
+                    <p>dimensiones: 55x55x39</p>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <fieldset>
+              <input
+              class="iniciar-envio disabled"
+              type="submit"
+              value="Iniciar Envío"
+              disabled
+              />
+            </fieldset>
+        </form>
+      </div>
+    </section> -->
 
     <footer>
       <div class="site-map container">
@@ -124,9 +159,11 @@
       </div>
       <div class="copyright container">
         <p>
-          © creado por: <a href="https://github.com/andresmii">@andresmii</a>
+          © 2023 creado por:
+          <a href="https://github.com/andresmii">@andresmii</a>
         </p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
