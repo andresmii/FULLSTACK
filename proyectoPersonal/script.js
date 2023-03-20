@@ -12,6 +12,23 @@ const openBurgerMenu = () => {
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
+// const registerForm = document.querySelector(`.register-form`);
+// const newPassword = document.getElementById(`new-password`);
+// const confirmPassword = document.getElementById(`confirm-password`);
+
+// registerForm.addEventListener(`submit`, (e) => {
+//   e.preventDefault();
+
+//   if (newPassword.value !== confirmPassword.value) {
+//     alert(`passwords don't match`);
+//     return;
+//   }
+//   registerForm.submit();
+// });
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
 // opening and closing login modal
 const userModal = document.querySelector(`.user-modal`);
 const userOverlay = document.querySelector(`.user-overlay`);
@@ -43,42 +60,11 @@ document.addEventListener(`keydown`, (e) => {
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
+//////////////////////////////////////////////////
+///////////// CREATE-DISPLAY PRODUCT /////////////
 
 const productContainer = document.querySelector(`.product-wrapper`);
-console.log(productContainer);
-
-const product1 = {
-  category: `t shirt`,
-  color: `black`,
-  description: `a cool black oversized t shirt`,
-  cost: 10,
-  image: `194942208706-1_1280x.png`,
-  price: 20,
-  product: `oversized t shirt`,
-  stock: 50,
-};
-
-const product2 = {
-  category: `sweatshirt`,
-  color: [`navy`, `black`, `pearl white`, `yellow`, `gray`],
-  description: `the comfiest hoodie you can have`,
-  cost: 23,
-  image: `194942208706-2_1280x.png`,
-  price: 40,
-  product: `oversized hoodie`,
-  stock: 20,
-};
-
-const product3 = {
-  category: `sweatshirt`,
-  color: [`black`, `white`, `gray`, `burgundy`],
-  description: `i can't promise your gf is not going to steal you this one`,
-  cost: 20,
-  image: `th-198647226.png`,
-  price: 30,
-  product: `oversized sweatshirt`,
-  stock: 20,
-};
+// const productPageContainer = document.querySelector(`.product-layout`);
 
 const createProduct = (
   category,
@@ -102,13 +88,46 @@ const createProduct = (
   };
 };
 
+const product1 = createProduct(
+  `t shirt`,
+  `black`,
+  `a cool black oversized t shirt`,
+  10,
+  `194942208706-1_1280x.png`,
+  20,
+  `oversized t shirt`,
+  50
+);
+
+const product2 = createProduct(
+  `sweatshirt`,
+  [`navy`, `black`, `pearl white`, `yellow`, `gray`],
+  `the comfiest hoodie you can have`,
+  23,
+  `194942208706-2_1280x.png`,
+  40,
+  `oversized hoodie`,
+  20
+);
+
+const product3 = createProduct(
+  `sweatshirt`,
+  [`black`, `white`, `gray`, `burgundy`],
+  `i can't promise your gf is not going to steal you this one`,
+  20,
+  `th-198647226.png`,
+  30,
+  `oversized sweatshirt`,
+  20
+);
+
 const product4 = createProduct(
   `pants`,
   [`navy`, `black`, `grey`],
   `some cool pants made by us with much love for you`,
   30,
   `th-750742328.png`,
-  40,
+  45,
   `cool loose pants`,
   10
 );
@@ -124,12 +143,13 @@ const product5 = createProduct(
   60
 );
 
-const inventory = [product1, product2, product3];
-inventory.push(product4, product5);
+const inventory = [];
+inventory.push(product1, product2, product3, product4, product5);
 
-// function for displaying the products on the array on the page
+// function for displaying the products on the array on the index.html page
 const displayProduct = () => {
   productContainer.innerHTML = ``;
+  // productPageContainer.innerHTML = ``;
 
   for (let i = 0; i < inventory.length; i++) {
     const html = `
@@ -149,6 +169,7 @@ const displayProduct = () => {
     `;
 
     productContainer.insertAdjacentHTML(`beforeend`, html);
+    // productPageContainer.insertAdjacentHTML(`beforeend`, html);
   }
 };
 displayProduct();
@@ -672,3 +693,106 @@ displayProduct();
 //   );
 //   i++;
 // } while (i < cart.length);
+
+//////////////////////
+//////////////////////
+
+// // even numbers between two numbers
+// let n = 0;
+// while (n <= 20) {
+//   if (n % 2 === 0 && n >= 1) {
+//     console.log(n);
+//   }
+//   n++;
+// }
+
+//////////////
+
+// let number = (n) => {
+//   n > 0
+//     ? console.log(`positive`)
+//     : n === 0
+//     ? console.log(`zero`)
+//     : console.log(`negative`);
+// };
+// number(5);
+// number(0);
+// number(-2);
+
+// let a = (n) => {
+//   for (let i = n; i > n.length; i--) {
+//     console.log(i);
+//   }
+// };
+// a(20);
+
+// let a = (n) => {
+//   while (n >= 0) {
+//     console.log(n);
+//     n--;
+//   }
+// };
+// a(10);
+
+////////////////
+
+// // sum of numbers between 0 and x number
+// let res = 0;
+// let x = (n) => {
+//   while (n >= 0) {
+//     res = n + res;
+//     n--;
+//   }
+//   console.log(res);
+// };
+// x(10);
+
+// // another way to do it
+// let res = 0;
+// let i = 0;
+// let x = (n) => {
+//   while (n >= i) {
+//     res += i;
+//     i++;
+//   }
+//   console.log(res);
+// };
+// x(10);
+
+////////////////////
+
+// // regression but showing n / 10
+// let a = (n) => {
+//   while (n >= 0) {
+//     console.log(n / 10);
+//     n--;
+//   }
+// };
+// a(10);
+
+///////////////////
+
+// // calc avg
+// let accum = 0;
+// let avg = (arr) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     accum += arr[i];
+//   }
+//   console.log(`${accum} / ${arr.length} = ${(accum / arr.length).toFixed(2)}`);
+// };
+// avg([16, 18, 15, 19, 14, 10, 8, 20, 12, 10, 12, 16]);
+
+//////////////////////
+
+// // add up the odds between two given numbers
+// // ex: a = 0 / b = 10 / odds = [1, 3, 5, 7, 9] / sumOdds = 1 + 3 + 5 + 7 + 9 = 25
+// let sum = (a, b) => {
+//   let acc = 0;
+//   for (let i = a; i <= b; i++) {
+//     if (i % 2 === 1) {
+//       acc += i;
+//     }
+//   }
+//   console.log(acc);
+// };
+// sum(0, 10);

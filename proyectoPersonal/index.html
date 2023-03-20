@@ -104,8 +104,6 @@
       </div>
     </section>
 
-    <section class=""></section>
-
     <footer>
       <div class="site-map container">
         <ul>
@@ -138,20 +136,31 @@
       <form method="post" action="">
         <h2>Sign into your account:</h2>
         <div class="login-inputs">
-          <label for="email">Username/Email:</label>
-          <input type="text" id="email" placeholder="username/email" required />
-          <label for="password">Password:</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="password"
-            required
-          />
+          <label for="email"
+            >Email:
+            <input
+              name="email"
+              type="email"
+              id="email"
+              placeholder="email"
+              required
+            />
+          </label>
+          <label for="password"
+            >Password:
+            <input
+              type="password"
+              name="password"
+              id="password"
+              pattern="[a-z0-9]{8,}"
+              placeholder="password"
+              required
+            />
+          </label>
         </div>
         <input type="submit" name="submit" id="submit" value="Continue" />
         <h5 class="register">
-          Don't have an account? <a href="">Register here!</a>
+          Don't have an account? <a href="register.html">Register here!</a>
         </h5>
       </form>
     </div>

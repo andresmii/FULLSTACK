@@ -77,25 +77,54 @@
       </div>
     </header>
 
-    <section class="product_section">
-      <div class="filter-div"></div>
-      <div class="product-layout container background-transparent">
-        <div class="product">
-          <div class="product-display">
-            <a href="">
-              <img
-                class="img-grid-view"
-                src="img/product_image/1-1.jpg"
-                alt="shirt 1"
+    <main class="main-register">
+      <div class="container register-container">
+        <div class="register-form-div background-transparent">
+          <h2>create a new account</h2>
+          <form method="post" action="" class="register-form">
+            <fieldset class="person-info">
+              <label for="first-name">First Name: </label>
+              <input id="first-name" name="first-name" type="text" required />
+              <label for="last-name">Last Name: </label>
+              <input id="last-name" name="last-name" type="text" required />
+            </fieldset>
+            <fieldset class="account-info">
+              <label for="email">Email:</label>
+              <input id="email" name="email" type="email" required />
+              <label for="new-password">New Password:</label>
+              <input
+                id="new-password"
+                name="new-password"
+                title="password must contain at least (1) lowercase letter and (1) number"
+                type="password"
+                pattern="[a-z0-9]{8,}"
+                required
               />
-            </a>
-            <a href="#"><h4>product</h4></a>
-            <h5>description</h5>
-            <p>price €</p>
-          </div>
+              <label for="confirm-password">Confirm Password:</label>
+              <input
+                id="confirm-password"
+                name="confirm-password"
+                title="password must be the same as 'New Password'"
+                type="password"
+                pattern="[a-z0-9]{8,}"
+                required
+              />
+
+              <label for="terms-and-conditions">
+                <input
+                  id="terms-and-conditions"
+                  type="checkbox"
+                  required
+                  name="terms-and-conditions"
+                  class="inline"
+                />I accept the <a href="#">terms and conditions</a></label
+              >
+            </fieldset>
+            <button type="submit">create account</button>
+          </form>
         </div>
       </div>
-    </section>
+    </main>
 
     <footer>
       <div class="site-map container">
