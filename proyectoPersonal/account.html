@@ -78,21 +78,66 @@
     </header>
 
     <main class="main-accs">
-      <div class="container">
+      <div class="container accounts-grid">
         <div class="dashboard">
           <div class="dashboard-img"><img src="" alt="" /></div>
           <div class="dashboard-text">
-            <h2></h2>
-            <h6></h6>
-            <p></p>
+            <h2>my dashboard</h2>
+            <h4>welcome, xxx xxx</h4>
+            <p>
+              From your dashboard you can view your recent activity or edit your
+              personal information.
+            </p>
           </div>
         </div>
         <div class="side-menu">
           <div>
+            <h2>my account</h2>
             <ul>
-              <li></li>
-              <li></li>
+              <li><a href="">my account</a></li>
+              <li><a href="">my orders</a></li>
+              <li><a href="">my wishlist</a></li>
+              <li><a href="">my addresses</a></li>
+              <li><a href="">my payment methods</a></li>
+              <li><a href="">returns</a></li>
             </ul>
+          </div>
+        </div>
+        <div class="content-div">
+          <div class="orders-menu">
+            <h2>my orders</h2>
+            <table class="orders-table">
+              <thead>
+                <tr>
+                  <th>order #</th>
+                  <th>date</th>
+                  <th>ship to</th>
+                  <th>order total</th>
+                  <th>status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>nfeui</td>
+                  <td>nfeui</td>
+                  <td>nfeui</td>
+                  <td>nfeui</td>
+                  <td>nfeui</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="account-info-menu">
+            <h2>account information</h2>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="addresses-info">
+            <h2>my addresses</h2>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -130,8 +175,8 @@
       <form method="post" action="">
         <h2>Sign into your account:</h2>
         <div class="login-inputs">
-          <label for="email">Username/Email:</label>
-          <input type="text" id="email" placeholder="username/email" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="email" required />
           <label for="password">Password:</label>
           <input
             type="password"
@@ -149,6 +194,7 @@
     </div>
     <div class="user-overlay hidden"></div>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="common.js"></script>
   </body>
 </html>

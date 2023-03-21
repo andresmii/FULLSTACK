@@ -1,63 +1,5 @@
 "use strict";
 
-// burger menu (for tablet and mobile)
-const burgerMenu = document.getElementById("myLinks");
-
-const openBurgerMenu = () => {
-  burgerMenu.style.display === `block`
-    ? (burgerMenu.style.display = `none`)
-    : (burgerMenu.style.display = `block`);
-};
-
-//////////////////////////////////////////////////
-//////////////////////////////////////////////////
-
-// const registerForm = document.querySelector(`.register-form`);
-// const newPassword = document.getElementById(`new-password`);
-// const confirmPassword = document.getElementById(`confirm-password`);
-
-// registerForm.addEventListener(`submit`, (e) => {
-//   e.preventDefault();
-
-//   if (newPassword.value !== confirmPassword.value) {
-//     alert(`passwords don't match`);
-//     return;
-//   }
-//   registerForm.submit();
-// });
-
-//////////////////////////////////////////////////
-//////////////////////////////////////////////////
-
-// opening and closing login modal
-const userModal = document.querySelector(`.user-modal`);
-const userOverlay = document.querySelector(`.user-overlay`);
-const userBtn = document.querySelectorAll(`.profile-div`);
-const btnClose = document.querySelectorAll(`.btn--close-modal`);
-
-const openUserModal = function (e) {
-  e.preventDefault();
-  userModal.classList.remove(`hidden`);
-  userOverlay.classList.remove(`hidden`);
-};
-
-const closeUserModal = function () {
-  userModal.classList.add(`hidden`);
-  userOverlay.classList.add(`hidden`);
-};
-
-// calling open
-userBtn.forEach((btn) => btn.addEventListener(`click`, openUserModal));
-
-// calling close
-btnClose.forEach((btn) => btn.addEventListener(`click`, closeUserModal));
-userOverlay.addEventListener(`click`, closeUserModal);
-document.addEventListener(`keydown`, (e) => {
-  if (e.key === `Escape` && !userModal.classList.contains(`hidden`)) {
-    closeUserModal();
-  }
-});
-
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -66,29 +8,18 @@ document.addEventListener(`keydown`, (e) => {
 const productContainer = document.querySelector(`.product-wrapper`);
 // const productPageContainer = document.querySelector(`.product-layout`);
 
-const createProduct = (
-  category,
-  color,
-  description,
-  cost,
-  image,
-  price,
-  product,
-  stock
-) => {
-  return {
-    category,
-    color,
-    description,
-    cost,
-    image,
-    price,
-    product,
-    stock,
-  };
-};
+function Product(cat, color, desc, cost, img, price, prod, stock) {
+  this.category = cat;
+  this.color = color;
+  this.description = desc;
+  this.cost = cost;
+  this.image = img;
+  this.price = price;
+  this.product = prod;
+  this.stock = stock;
+}
 
-const product1 = createProduct(
+const product1 = new Product(
   `t shirt`,
   `black`,
   `a cool black oversized t shirt`,
@@ -99,7 +30,7 @@ const product1 = createProduct(
   50
 );
 
-const product2 = createProduct(
+const product2 = new Product(
   `sweatshirt`,
   [`navy`, `black`, `pearl white`, `yellow`, `gray`],
   `the comfiest hoodie you can have`,
@@ -110,7 +41,7 @@ const product2 = createProduct(
   20
 );
 
-const product3 = createProduct(
+const product3 = new Product(
   `sweatshirt`,
   [`black`, `white`, `gray`, `burgundy`],
   `i can't promise your gf is not going to steal you this one`,
@@ -121,7 +52,7 @@ const product3 = createProduct(
   20
 );
 
-const product4 = createProduct(
+const product4 = new Product(
   `pants`,
   [`navy`, `black`, `grey`],
   `some cool pants made by us with much love for you`,
@@ -132,7 +63,7 @@ const product4 = createProduct(
   10
 );
 
-const product5 = createProduct(
+const product5 = new Product(
   `shorts`,
   [`navy`, `black`, `red`, `orange`],
   `they can also be used as a swimsuit`,
@@ -796,3 +727,127 @@ displayProduct();
 //   console.log(acc);
 // };
 // sum(0, 10);
+
+////////////////////
+////////////////////
+
+// // get an array of grades, take the average and say if its approved or suspended
+
+/////////////////////////
+
+// // depending on which month say how many days it has
+// const monthObj = (month, days) => {
+//   return {
+//     month,
+//     days,
+//   };
+// };
+
+// let jan = monthObj(`jan`, 31);
+// let feb = monthObj(`feb`, 28);
+// let mar = monthObj(`mar`, 31);
+// let apr = monthObj(`apr`, 30);
+// let may = monthObj(`may`, 31);
+// let jun = monthObj(`jun`, 30);
+// let jul = monthObj(`jul`, 31);
+// let aug = monthObj(`aug`, 31);
+// let sep = monthObj(`sep`, 30);
+// let oct = monthObj(`oct`, 31);
+// let nov = monthObj(`nov`, 30);
+// let dec = monthObj(`dec`, 31);
+
+// let months = [];
+// months.push(jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec);
+
+// months.forEach((m) => {
+//   console.log(`${m.month} has ${m.days} days`);
+// });
+
+// /////////////
+
+// const cart = [
+//   { name: `shirt`, cost: 30, units: 50 },
+//   { name: `t-shirt`, cost: 15, units: 15 },
+//   { name: `shoes`, cost: 85, units: 12 },
+//   { name: `jacket`, cost: 100, units: 2 },
+//   { name: `scarf`, cost: 5, units: 36 },
+//   { name: `tuxedo`, cost: 170, units: 0 },
+//   { name: `cap`, cost: 20, units: 40 },
+//   { name: `sunglasses`, cost: 120, units: 15 },
+//   { name: `pants`, cost: 40, units: 23 },
+//   { name: `dress`, cost: 50, units: 15 },
+//   { name: `shorts`, cost: 10, units: 8 },
+//   { name: `coat`, cost: 300, units: 3 },
+// ];
+
+// cart.forEach((n) => {
+//   console.log(n.name);
+// });
+
+// const arrMap = cart.map((p) => p.name);
+// console.log(arrMap);
+
+/////////////////////
+/////////////////////
+
+// let res = {
+//   name: `john`,
+//   lastName: `doe`,
+//   total: 25,
+//   payed: 28,
+// };
+
+// res.message = function () {
+//   console.log(
+//     `the reservation for ${res.name} ${res.lastName} costed $${res.total} and payed $${res.payed}`
+//   );
+// };
+// res.message();
+
+// let date = {
+//   y: 2030,
+//   m: 3,
+//   d: 21,
+//   daysUntilMonthEnds: function () {
+//     console.log(
+//       `${11 - this.m} months and ${31 - this.d} days until the end of the month`
+//     );
+//   },
+// };
+// date.daysUntilMonthEnds();
+
+///////////////////////////
+///////////////////////////
+
+// object oriented programming
+////////////////////
+
+function Fecha(a, m, d) {
+  this.year = a;
+  this.month = m;
+  this.day = d;
+}
+
+const myBirthday = new Fecha(1994, 2, 24);
+const today = new Fecha(2023, 3, 21);
+const todayInOneYear = new Fecha(2024, 3, 21);
+console.log(myBirthday, today, todayInOneYear);
+
+/////////////////////
+
+function Producto(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+Producto.prototype.formatProd = function () {
+  console.log(`the product ${this.name} has a price of ${this.price}€`);
+};
+
+const prod = new Producto(`keyboard`, 95);
+const prod2 = new Producto(`mouse`, 20);
+const prod3 = new Producto(`chair`, 160);
+
+prod.formatProd();
+prod2.formatProd();
+prod3.formatProd();
