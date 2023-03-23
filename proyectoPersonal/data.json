@@ -1,0 +1,44 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "john doe",
+      "position": "ceo"
+    },
+    {
+      "id": 2,
+      "name": "snoop dogg",
+      "position": "cfo"
+    },
+    {
+      "id": 3,
+      "name": "jose manuel",
+      "position": "marketing strategist"
+    },
+    {
+      "id": 4,
+      "name": "jonas schmedtmann",
+      "position": "programmer"
+    },
+    {
+      "id": 5,
+      "name": "angela yu",
+      "position": "designer"
+    },
+    {
+      "id": 6,
+      "name": "andres leon",
+      "position": "ux"
+    },
+    {
+      "id": 7,
+      "name": "carlos sainz",
+      "position": "designated driver"
+    },
+    {
+      "id": 8,
+      "name": "robert kiyosaki",
+      "position": "finance advisor"
+    }
+  ]
+}
