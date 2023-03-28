@@ -48,33 +48,35 @@
             </a>
           </nav>
         </div>
-        <div class="control-bar">
-          <div class="dark_mode-div control-el">
-            <span class="material-symbols-outlined search-icon">
-              light_mode
-            </span>
-          </div>
-          <div class="dark_mode-div control-el">
-            <span class="material-symbols-outlined search-icon">
-              dark_mode
-            </span>
-          </div>
-          <div class="search-div control-el">
-            <span class="material-symbols-outlined search-icon"> search </span>
-          </div>
-          <div class="profile-div control-el">
-            <span
-              class="material-symbols-outlined person-icon"
-              id="person-icon"
-            >
-              person
-            </span>
-          </div>
-          <div class="cart-div control-el">
-            <span class="material-symbols-outlined shop-icon">
-              shopping_bag
-            </span>
-          </div>
+        <div class="search-div control-el" id="search-bar">
+          <form action="/search" method="get">
+            <div id="search-label">
+              <label class="btn search-icon" for="search-input">
+                <span class="material-symbols-outlined search-icon">
+                  search
+                </span>
+              </label>
+            </div>
+            <div id="search-input">
+              <input
+                class="search-input"
+                type="search"
+                name=""
+                id="search-input"
+                placeholder="search... "
+              />
+            </div>
+          </form>
+        </div>
+        <div class="profile-div control-el">
+          <span class="material-symbols-outlined person-icon" id="person-icon">
+            person
+          </span>
+        </div>
+        <div class="cart-div control-el">
+          <span class="material-symbols-outlined shop-icon">
+            shopping_bag
+          </span>
         </div>
       </div>
     </header>

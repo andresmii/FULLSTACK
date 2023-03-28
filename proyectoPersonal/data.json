@@ -1,44 +1,34 @@
 {
-  "employees": [
+  "products": [
     {
-      "id": 1,
-      "name": "john doe",
-      "position": "ceo"
+      "category": "t shirt",
+      "color": "black",
+      "description": "a cool black oversized t shirt",
+      "cost": 10,
+      "image": "194942208706-1_1280x.png",
+      "price": 20,
+      "product": "oversized t shirt",
+      "stock": 50
     },
     {
-      "id": 2,
-      "name": "snoop dogg",
-      "position": "cfo"
+      "category": "sweatshirt",
+      "color": ["navy", "black", "pearl white", "yellow", "gray"],
+      "description": "the comfiest hoodie you can have",
+      "cost": 23,
+      "image": "194942208706-2_1280x.png",
+      "price": 40,
+      "product": "oversized hoodie",
+      "stock": 20
     },
     {
-      "id": 3,
-      "name": "jose manuel",
-      "position": "marketing strategist"
-    },
-    {
-      "id": 4,
-      "name": "jonas schmedtmann",
-      "position": "programmer"
-    },
-    {
-      "id": 5,
-      "name": "angela yu",
-      "position": "designer"
-    },
-    {
-      "id": 6,
-      "name": "andres leon",
-      "position": "ux"
-    },
-    {
-      "id": 7,
-      "name": "carlos sainz",
-      "position": "designated driver"
-    },
-    {
-      "id": 8,
-      "name": "robert kiyosaki",
-      "position": "finance advisor"
+      "category": "sweatshirt",
+      "color": ["navy", "black", "gray"],
+      "description": "we can't promise your gf is not going to steal you this one",
+      "cost": 20,
+      "image": "th-198647226.png",
+      "price": 30,
+      "product": "oversized sweatshirt",
+      "stock": 20
     }
   ]
 }

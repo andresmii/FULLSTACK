@@ -906,30 +906,161 @@
 /////////////////////////
 /////////////////////////
 
-// fetching API
-const getEmployees = () => {
-  fetch(`data.json`)
-    .then((res) => {
-      return res.json();
+// // fetching API
+// const getEmployees = () => {
+//   fetch(`data.json`)
+//     .then((res) => {
+//       return res.json();
+//     })
+//     .then((data) => {
+//       console.log(data);
+//       const { employees } = data;
+//       employees.forEach((emp) => {
+//         console.log(`the employee ${emp.name} works as ${emp.position}`);
+//       }); // use destructuring to get a specific property
+//     });
+// };
+// getEmployees();
+
+// async function getEmployees2() {
+//   const res = await fetch(`data.json`);
+//   const data = await res.json();
+//   console.log(data);
+
+//   const { employees } = data;
+//   employees.forEach((emp) => {
+//     console.log(`the employee ${emp.name} works as ${emp.position}`);
+//   });
+// }
+// getEmployees2();
+
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+
+// document.querySelector / .querySelectorAll / .getElementById
+
+// const heading = document.querySelector(`h1`);
+// const linksJS = document.querySelectorAll(`a`);
+// const ejemplo = document.getElementById(`ejemplo`);
+// console.log(heading);
+// console.log(linksJS);
+// console.log(ejemplo);
+
+// // heading.textContent = `hola`;
+
+// // heading.classList.add(`new-class`);
+// // heading.classList.remove(`new-class`);
+
+// linksJS[1].textContent = `el bicho siuuu`;
+// linksJS[1].href = `https://www.youtube.com/`;
+
+/////////////////
+
+// const navList = document.querySelector(`.nav-list`);
+// const linkNew = document.createElement(`a`);
+// console.log(navList);
+
+// linkNew.textContent = `new link`;
+// linkNew.href = `#`;
+// linkNew.classList.add(`info-button`, `list`);
+// console.log(linkNew);
+
+// navList.appendChild(linkNew);
+
+//////////////////////
+
+// const list = document.querySelector(`.cursos-location-menu`);
+// const btnNew = document.createElement(`a`);
+// const firstBtn = document.querySelector(`.tab-0`);
+// console.log(list);
+// console.log(firstBtn);
+
+// btnNew.textContent = `ay mi madre el bicho`;
+// btnNew.classList.add(`cursos-location-box`, `tab-location`);
+// btnNew.setAttribute(`data-filter`, `filter6`);
+// console.log(btnNew);
+
+// list.appendChild(btnNew);
+// // list.insertBefore(btnNew, firstBtn); // inserting before a given element
+
+// /////////////////////////////
+// // loading contents in page
+
+// console.log(1);
+
+// window.addEventListener(`load`, () => {
+//   console.log(2);
+// });
+
+// document.addEventListener(`DOMContentLoaded`, () => {
+//   console.log(3);
+// });
+
+// console.log(4);
+
+///////////////////////////
+const firstNameInput = document.querySelector(`#firstName`);
+const lastNameInput = document.querySelector(`#lastName`);
+const emailInput = document.querySelector(`#email`);
+const form = document.querySelector(`form`);
+
+// firstNameInput.addEventListener(`change`, (e) => {
+//   // console.log(`escribiendo nombre`); // `change` type logs the info typed, when you deselect it
+// });
+firstNameInput.addEventListener(`input`, (e) => {});
+lastNameInput.addEventListener(`input`, (e) => {
+  // console.log(`escribiendo apellido`); // `input` type does the log of each key event
+  // console.log(e.target.value);
+});
+emailInput.addEventListener(`input`, (e) => {
+  // console.log(e.target.value);
+});
+
+// form.addEventListener(`submit`, (e) => {
+//   e.preventDefault();
+//   console.log(`enviando formulario...📨`);
+// });
+
+form.addEventListener(`submit`, (e) => {
+  e.preventDefault();
+  console.log(`enviando formulario...📨`);
+
+  // create an object to hold the form data
+  const formData = {
+    firstName: firstNameInput.value,
+    lastName: lastNameInput.value,
+    email: emailInput.value,
+  };
+
+  // convert the form data to JSON format
+  const jsonData = JSON.stringify(formData);
+
+  // send the JSON data to the server
+  fetch("http://localhost:3000/data", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: jsonData,
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      console.log("Form data saved successfully");
     })
-    .then((data) => {
-      console.log(data);
-      const { employees } = data;
-      employees.forEach((emp) => {
-        console.log(`the employee ${emp.name} works as ${emp.position}`);
-      }); // use destructuring to get a specific property
+    .catch((error) => {
+      console.error("There was a problem saving the form data:", error);
     });
-};
-getEmployees();
+});
 
-async function getEmployees2() {
-  const res = await fetch(`data.json`);
-  const data = await res.json();
-  console.log(data);
-
-  const { employees } = data;
-  employees.forEach((emp) => {
-    console.log(`the employee ${emp.name} works as ${emp.position}`);
+// After saving the form data to the file, fetch the contents of the file and log it to the console
+fetch("db.json")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Form data saved:", data);
+  })
+  .catch((error) => {
+    console.error("Error fetching form data:", error);
   });
-}
-getEmployees2();

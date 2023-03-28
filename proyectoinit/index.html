@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" href="css/normalize.css" as="normalize" />
+    <!-- <link rel="preload" href="css/normalize.css" as="normalize" /> -->
     <link rel="normalize" href="css/normalize.css" />
     <link rel="icon" href="Favicon.png" />
-    <link rel="preload" href="css/styles.css" as="styles" />
+    <!-- <link rel="preload" href="css/styles.css" as="styles" /> -->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Tu Carrera Digital - Zona Centro</title>
   </head>
@@ -50,7 +50,7 @@
       <div class="main-section">
         <div class="main-section-div contenedor">
           <div class="main-section-div-el">
-            <h1 class="texto">
+            <h1 class="texto" id="ejemplo">
               Descubre la formación que te dará la oportunidad de convertirte en
               un profesional digital
             </h1>
@@ -326,103 +326,128 @@
       <div class="form-banner">
         <img src="img/download.png" alt="banner-logos" />
       </div>
-      <form class="modal__form">
-        <div class="modal-info">
-          <h2 class="modal__header">Impulsa tu futuro profesional</h2>
-          <p>¿Qué formación te interesa?</p>
-          <p>
-            Con esta solicitud recogemos tu interés en los programas formativos
-            que más te interesen. En cuanto estén confirmadas las fechas de
-            inicio contactaremos contigo para que puedas realizar tu
-            inscripción.
-          </p>
-          <p>
-            Recuerda que es importante que cumplas los requisitos. Aprovecha
-            esta oportunidad!
-          </p>
-        </div>
-        <input
-          class="nombre-form"
-          type="text"
-          placeholder="Nombre"
-          required
-        /><span>*</span>
-        <input
-          class="apellido-form"
-          type="text"
-          placeholder="Primer Apellido"
-          required
-        /><span>*</span>
-        <input
-          class="apellido-form"
-          type="text"
-          placeholder="Segundo Apellido"
-        />
-        <input
-          class="dob-form"
-          type="text"
-          placeholder="Fecha de Nacimiento (dd/MM/yyyy)"
-          required
-        /><span>*</span>
-        <input class="tel-form" type="tel" placeholder="Teléfono" />
-        <input
-          class="email-form"
-          type="email"
-          placeholder="Email"
-          required
-        /><span>*</span>
-        <div class="ciudad-form">
-          <select name="ciudad" id="select-ciudad" required>
-            <option class="ciudad-option" value="0">
-              Seleccione la ciudad
-            </option>
-            <option class="ciudad-option" value="1">León</option>
-            <option class="ciudad-option" value="2">Madrid</option>
-            <option class="ciudad-option" value="3">Salamanca</option>
-            <option class="ciudad-option" value="4">Valladolid</option>
-            <option class="ciudad-option" value="5">Zaragoza</option></select
-          ><span>*</span>
-        </div>
-        <div class="programa-form">
-          <label for="programa">Programa:<span>*</span></label>
-          <select id="programa" name="" id="" required>
-            <option value=""></option>
-            <option value="">Marketing</option>
-            <option value="">Programación de Videojuegos</option>
-            <option value="">Programación Full Stack</option>
-          </select>
-        </div>
-        <textarea
-          class="observaciones"
-          name=""
-          id=""
-          cols="30"
-          rows="5"
-          placeholder="Observaciones..."
-        ></textarea>
-        <div class="tyc">
-          <p>Los campos marcados con (*) son obligatorios</p>
-          <div class="tyc-accept">
-            <input type="checkbox" required />
+      <!-- <form class="modal__form">
+        <fieldset>
+          <div class="modal-info">
+            <h2 class="modal__header">Impulsa tu futuro profesional</h2>
+            <p>¿Qué formación te interesa?</p>
             <p>
-              He leído y acepto la
-              <a
-                href="https://www.tucarreradigital.es/zona-centro/politica-de-privacidad"
-                >política de privacidad</a
-              ><span>*</span>
+              Con esta solicitud recogemos tu interés en los programas
+              formativos que más te interesen. En cuanto estén confirmadas las
+              fechas de inicio contactaremos contigo para que puedas realizar tu
+              inscripción.
+            </p>
+            <p>
+              Recuerda que es importante que cumplas los requisitos. Aprovecha
+              esta oportunidad!
             </p>
           </div>
-          <p>
-            Para realizar estos programas gratuitos financiados por el Fondo
-            Social Europeo es necesario que en el momento de la formación
-            cumplas los siguientes requisitos:
-          </p>
-          <p>-Tener entre 16 y 30 años</p>
-          <p>-Estar registrado en el Sistema Nacional de Garantía Juvenil</p>
-        </div>
-        <div class="btn-submit">
-          <button class="btn" type="submit">Enviar</button>
-        </div>
+          <input
+            class="nombre-form"
+            type="text"
+            placeholder="Nombre"
+            required
+          /><span>*</span>
+          <input
+            class="apellido-form"
+            type="text"
+            placeholder="Primer Apellido"
+            required
+          /><span>*</span>
+          <input
+            class="apellido-form"
+            type="text"
+            placeholder="Segundo Apellido"
+          />
+          <input
+            class="dob-form"
+            type="text"
+            placeholder="Fecha de Nacimiento (dd/MM/yyyy)"
+            required
+          /><span>*</span>
+          <input class="tel-form" type="tel" placeholder="Teléfono" />
+          <input
+            class="email-form"
+            type="email"
+            placeholder="Email"
+            required
+          /><span>*</span>
+          <div class="ciudad-form">
+            <select name="ciudad" id="select-ciudad" required>
+              <option class="ciudad-option" value="0">
+                Seleccione la ciudad
+              </option>
+              <option class="ciudad-option" value="1">León</option>
+              <option class="ciudad-option" value="2">Madrid</option>
+              <option class="ciudad-option" value="3">Salamanca</option>
+              <option class="ciudad-option" value="4">Valladolid</option>
+              <option class="ciudad-option" value="5">Zaragoza</option></select
+            ><span>*</span>
+          </div>
+          <div class="programa-form">
+            <label for="programa">Programa:<span>*</span></label>
+            <select id="programa" name="" id="" required>
+              <option value=""></option>
+              <option value="">Marketing</option>
+              <option value="">Programación de Videojuegos</option>
+              <option value="">Programación Full Stack</option>
+            </select>
+          </div>
+          <textarea
+            class="observaciones"
+            name=""
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="Observaciones..."
+          ></textarea>
+          <div class="tyc">
+            <p>Los campos marcados con (*) son obligatorios</p>
+            <div class="tyc-accept">
+              <input type="checkbox" required />
+              <p>
+                He leído y acepto la
+                <a
+                  href="https://www.tucarreradigital.es/zona-centro/politica-de-privacidad"
+                  >política de privacidad</a
+                ><span>*</span>
+              </p>
+            </div>
+            <p>
+              Para realizar estos programas gratuitos financiados por el Fondo
+              Social Europeo es necesario que en el momento de la formación
+              cumplas los siguientes requisitos:
+            </p>
+            <p>-Tener entre 16 y 30 años</p>
+            <p>-Estar registrado en el Sistema Nacional de Garantía Juvenil</p>
+          </div>
+          <div class="btn-submit">
+            <button class="btn" type="submit">Enviar</button>
+          </div>
+        </fieldset>
+      </form> -->
+
+      <form action="">
+        <fieldset>
+          <legend>formulario</legend>
+          <div>
+            <div>
+              <label for="">nombre:</label>
+              <input type="text" id="firstName" placeholder="nombre" />
+            </div>
+            <div>
+              <label for="">apellido:</label>
+              <input type="text" id="lastName" placeholder="apellido" />
+            </div>
+            <div>
+              <label for="">email:</label>
+              <input type="email" id="email" placeholder="email" />
+            </div>
+          </div>
+          <div>
+            <input class="formBtn" type="submit" value="enviar" />
+          </div>
+        </fieldset>
       </form>
     </div>
     <div class="overlay hidden"></div>
@@ -445,5 +470,6 @@
     </div> -->
 
     <script src="script.js"></script>
+    <script src="clases.js"></script>
   </body>
 </html>

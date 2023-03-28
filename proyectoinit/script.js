@@ -69,7 +69,7 @@ tabContainer.addEventListener(`click`, function (e) {
 
   // adding and removing classes of the `boxes`
   const filterValue = clicked.getAttribute(`data-filter`);
-  console.log(filterValue);
+  // console.log(filterValue);
 
   boxes.forEach((boxes) => {
     if (filterValue === `all`) {
