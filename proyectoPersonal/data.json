@@ -1,34 +1,189 @@
 {
-  "products": [
+  "tshirts": [
     {
-      "category": "t shirt",
+      "category": "t-shirt",
+      "color": "yellow",
+      "description": "in honor to bob marley",
+      "cost": 16.25,
+      "image": "tshirt-001a.png",
+      "image-hover": "tshirt-001b.png",
+      "price": 24.99,
+      "product": "bob marley shirt",
+      "stock": 24
+    },
+    {
+      "category": "t-shirt",
+      "color": "green",
+      "description": "our signature t-shirt",
+      "cost": 11.45,
+      "image": "tshirt-002a.png",
+      "image-hover": "tshirt-002b.png",
+      "price": 19.99,
+      "product": "signature tee",
+      "stock": 20
+    },
+    {
+      "category": "t-shirt",
+      "color": "brown",
+      "description": "our signature t-shirt",
+      "cost": 11.45,
+      "image": "tshirt-003a.png",
+      "image-hover": "tshirt-003b.png",
+      "price": 19.99,
+      "product": "signature tee",
+      "stock": 23
+    },
+    {
+      "category": "t-shirt",
+      "color": "yellow",
+      "description": "our signature t-shirt",
+      "cost": 11.45,
+      "image": "tshirt-004a.png",
+      "image-hover": "tshirt-004b.png",
+      "price": 19.99,
+      "product": "signature tee",
+      "stock": 19
+    },
+    {
+      "category": "t-shirt",
       "color": "black",
-      "description": "a cool black oversized t shirt",
-      "cost": 10,
-      "image": "194942208706-1_1280x.png",
-      "price": 20,
-      "product": "oversized t shirt",
-      "stock": 50
+      "description": "our signature t-shirt",
+      "cost": 11.45,
+      "image": "tshirt-005a.png",
+      "image-hover": "tshirt-005b.png",
+      "price": 19.99,
+      "product": "signature tee",
+      "stock": 22
+    }
+  ],
+
+  "sweatshirts": [
+    {
+      "category": "sweatshirt",
+      "color": "gray",
+      "description": "gray sweatshirt for women",
+      "cost": 19.85,
+      "image": "sweatshirt-001a.jpg",
+      "image-hover": "sweatshirt-001b.jpg",
+      "price": 34.99,
+      "product": "woman sweatshirt",
+      "stock": 10
     },
     {
       "category": "sweatshirt",
-      "color": ["navy", "black", "pearl white", "yellow", "gray"],
-      "description": "the comfiest hoodie you can have",
-      "cost": 23,
-      "image": "194942208706-2_1280x.png",
-      "price": 40,
-      "product": "oversized hoodie",
-      "stock": 20
+      "color": "pink",
+      "description": "essentials fear of god pink sweatshirt",
+      "cost": 22.5,
+      "image": "sweatshirt-002a.png",
+      "image-hover": "sweatshirt-002b.png",
+      "price": 41.95,
+      "product": "oversized fear of god hoodie",
+      "stock": 18
     },
     {
       "category": "sweatshirt",
-      "color": ["navy", "black", "gray"],
-      "description": "we can't promise your gf is not going to steal you this one",
-      "cost": 20,
-      "image": "th-198647226.png",
-      "price": 30,
-      "product": "oversized sweatshirt",
-      "stock": 20
+      "color": "gray",
+      "description": "oversized comfortable tennis sweatshirt",
+      "cost": 21.45,
+      "image": "sweatshirt-003a.png",
+      "image-hover": "sweatshirt-003b.png",
+      "price": 44.99,
+      "product": "oversized tennis sweatshirt",
+      "stock": 30
+    },
+    {
+      "category": "sweatshirt",
+      "color": "brown",
+      "description": "special edition adidas jacket",
+      "cost": 60.0,
+      "image": "sweatshirt-004a.png",
+      "image-hover": "sweatshirt-004b.png",
+      "price": 89.99,
+      "product": "adidas jacket",
+      "stock": 5
+    },
+    {
+      "category": "sweatshirt",
+      "color": "navy",
+      "description": "1977 essential hoodie",
+      "cost": 21.5,
+      "image": "sweatshirt-005a.png",
+      "image-hover": "sweatshirt-005b.png",
+      "price": 37.99,
+      "product": "1977 hoodie",
+      "stock": 12
+    }
+  ],
+
+  "pants": [
+    {
+      "category": "pants",
+      "color": "brown",
+      "description": "cargo pants with some pockets for your stuff",
+      "cost": 29.5,
+      "image": "pants-001a.png",
+      "image-hover": "pants-001b.png",
+      "price": 54.99,
+      "product": "cargo pants",
+      "stock": 16
+    },
+    {
+      "category": "pants",
+      "color": "brown",
+      "description": "aztec themed relaxed fit panna pants",
+      "cost": 32.5,
+      "image": "pants-002a.png",
+      "image-hover": "pants-002b.png",
+      "price": 69.99,
+      "product": "aztec pants",
+      "stock": 3
+    },
+    {
+      "category": "pants",
+      "color": "blue",
+      "description": "light straight jeans",
+      "cost": 21.45,
+      "image": "pants-003a.png",
+      "image-hover": "pants-003b.png",
+      "price": 55,
+      "product": "light jeans",
+      "stock": 15
+    }
+  ],
+
+  "shorts": [
+    {
+      "category": "shorts",
+      "color": "white",
+      "description": "match shorts of the spanish giants real madrid",
+      "cost": 29.5,
+      "image": "shorts-001a.jpg",
+      "image-hover": "shorts-001b.jpg",
+      "price": 34.99,
+      "product": "real madrid shorts",
+      "stock": 34
+    },
+    {
+      "category": "shorts",
+      "color": "pink",
+      "description": "watermelon swimming trunks",
+      "cost": 13.99,
+      "image": "shorts-002a.webp",
+      "image-hover": "shorts-002b.webp",
+      "price": 23.49,
+      "product": "swimming trunks",
+      "stock": 10
+    },
+    {
+      "category": "shorts",
+      "color": "brown",
+      "description": "essential fresh cargo shorts",
+      "cost": 14.95,
+      "image": "shorts-003a.webp",
+      "image-hover": "shorts-003b.jpeg",
+      "price": 21.99,
+      "product": "cargo shorts",
+      "stock": 30
     }
   ]
 }

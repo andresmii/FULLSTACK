@@ -45,13 +45,20 @@
   /* --- transparents --- */
   --transpBlack: #03001c61;
   --darkTranspBlack: #0000008d;
-  --transpDarkGold: #c1924b8a;
-  --transpGold: #eabf7e8a;
+  --transpDarkGold: #c1924ba7;
+  --transpGold: #eabf7ea7;
+  /* --- --- --- --- --- */
+
+  /* --- -- fonts -- --- */
+  --serif-font: "Gantari", sans-serif;
+  --itim-cursive: "Itim", cursive;
+  --balsamiq: "Balsamiq Sans", cursive;
+  --hind-siliguri: "Hind Siliguri", sans-serif;
   /* --- --- --- --- --- */
 }
 
 * {
-  font-family: "Gantari", sans-serif;
+  font-family: var(--hind-siliguri);
   color: var(--black);
 }
 
@@ -61,7 +68,9 @@ html {
 }
 
 body {
-  background-color: var(--lightBeige);
+  background-attachment: fixed;
+  background-image: url("../img/abstract-illustration-tree-branches-roots_473931-33.jpg");
+  background-size: 8rem;
   font-size: 16px;
   height: 100%;
   margin: 0;
@@ -345,7 +354,6 @@ header {
 /* //////// SECTION = HORIZONTAL CONTAINER //////// */
 
 .show_section {
-  background: var(--beige2);
   height: auto;
   margin: 0;
   padding: 8rem 0;
@@ -387,7 +395,7 @@ header {
 
 .product-wrapper {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 2rem;
 }
 
@@ -398,8 +406,9 @@ header {
 }
 
 .product img {
-  height: 25rem;
+  height: auto;
   margin-bottom: 0;
+  max-width: 100%;
   width: 25rem;
 }
 
@@ -407,8 +416,8 @@ header {
 .product h5,
 .product p {
   margin: 0.5rem 0;
-  width: auto;
   padding: 0 1rem;
+  width: auto;
 }
 
 .product h5 {
@@ -449,32 +458,14 @@ footer {
 
 .site-map {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.site-map ul {
-  list-style: none;
-  margin: 0;
-  padding: 4rem;
-  text-transform: capitalize;
-  line-height: 2.5rem;
-}
-
-.site-map a {
-  color: var(--veryDarkGold);
-  text-decoration: none;
-}
-
-.site-map a:hover {
-  color: var(--darkGold);
+  justify-content: center;
 }
 
 .socials {
   display: flex;
   flex-direction: row;
-  grid-column: 4/5;
   justify-content: right;
-  padding: 3rem;
+  padding: 2rem 0 1rem 0;
 }
 
 .socials a {
@@ -485,7 +476,7 @@ footer {
 .copyright {
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 1rem 0 2rem 0;
   text-decoration: none;
 }
 
@@ -600,7 +591,6 @@ input {
 /* //////////////// register.html ///////////////// */
 
 .main-register {
-  background: var(--beige2);
   padding: 8rem 0;
   position: relative;
   top: 9rem;
@@ -696,7 +686,6 @@ input {
 /* //////////////// account.html ////////////////// */
 
 .main-accs {
-  background: var(--beige2);
   padding: 8rem 0;
   position: relative;
   top: 9rem;
@@ -820,13 +809,31 @@ input {
 /* //////////////// products.html ///////////////// */
 
 .product_section {
-  background: var(--beige2);
   height: auto;
   margin: 0;
   padding: 8rem 0;
   position: relative;
   top: 9rem;
   width: auto;
+}
+
+.filter-and-product {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-column-gap: 2rem;
+  justify-content: center;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 2rem;
+  width: 15rem;
+}
+
+.filter-list h4 {
+  margin-bottom: 0;
 }
 
 .product-layout {
@@ -836,19 +843,27 @@ input {
   justify-content: space-evenly;
 }
 
+/* THIS ELEMENT IS ALSO IN `index.html` */
+
 .product-display {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 5fr 0.5fr 0.5fr 0.2fr;
-  width: 30rem;
+  grid-template-rows: 3fr 0.5fr 0.5fr 0.2fr;
+  width: 25rem;
   justify-content: center;
   margin: 1rem 0;
 }
 
-.product-display a img {
+.img-grid-view {
   display: grid;
   height: auto;
   width: 30rem;
+}
+
+.product-display h5,
+.product-display a h4,
+.product-display p {
+  width: 20rem;
 }
 
 /* //////////////////////////////////////////////// */
@@ -867,8 +882,8 @@ input {
 /* ------------------------------------------------ */
 
 @media (max-width: 800px) {
-  /* //////////////////////////////////////////////// */
-  /* //////////////////// HEADER //////////////////// */
+  /* HEADER */
+
   header {
     height: 7rem;
     margin: 0;
@@ -883,11 +898,6 @@ input {
     grid-template-columns: repeat(16, 1fr);
     padding: 0 1rem;
   }
-
-  /* .navbar-div {
-    order: 1;
-    width: auto;
-  } */
 
   .navbar div {
     position: absolute;
@@ -948,7 +958,7 @@ input {
 
   .site-map {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
   }
 
   .socials {
@@ -960,20 +970,30 @@ input {
   /* //////////////////////////////////////////////// */
   /* //////////////////////////////////////////////// */
 
-  /* //////////////////////////////////////////////// */
-  /* //////////////////////////////////////////////// */
-  /* //////////////////////////////////////////////// */
-
   /* //////////////// products.html ///////////////// */
 
-  .product-section {
+  .product_section {
+    display: grid;
     top: 7rem;
+  }
+
+  .filter-and-product {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 5fr;
+    justify-content: center;
+  }
+
+  .product {
+    display: grid;
+    justify-content: center;
   }
 
   .product-layout {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 0.2rem;
     grid-row-gap: 1rem;
+    justify-self: center;
   }
 
   .product-display {
@@ -984,7 +1004,50 @@ input {
     justify-content: center;
   }
 
-  .product-display a .img-grid-view {
-    width: 15rem;
+  .img-grid-view {
+    width: 30rem;
+  }
+
+  /* //////////////////////////////////////////////// */
+  /* //////////////////////////////////////////////// */
+  /* //////////////////////////////////////////////// */
+
+  /* //////////////// register.html ///////////////// */
+
+  .main-register {
+    top: 7rem;
+  }
+
+  .register-form fieldset label {
+    display: flex;
+    justify-self: flex-end;
+    padding: 0.5rem;
+  }
+
+  /* //////////////////////////////////////////////// */
+  /* //////////////////////////////////////////////// */
+  /* //////////////////////////////////////////////// */
+
+  /* //////////////// account.html ///////////////// */
+
+  .main-accs {
+    top: 7rem;
+  }
+}
+
+/* ////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////// */
+
+@media (width <= 500px) {
+  .container {
+    width: 90%;
+  }
+
+  .logo-div {
+    position: relative;
   }
 }

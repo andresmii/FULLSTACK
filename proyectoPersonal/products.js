@@ -2,97 +2,61 @@
 
 const productPageContainer = document.querySelector(`.product-layout`);
 
-function Product(cat, color, desc, cost, img, price, prod, stock) {
-  this.category = cat;
-  this.color = color;
-  this.description = desc;
-  this.cost = cost;
-  this.image = img;
-  this.price = price;
-  this.product = prod;
-  this.stock = stock;
-}
+const getProduct = () => {
+  fetch(`data.json`)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      const { tshirts, sweatshirts, pants, shorts } = data;
+      const products = tshirts
+        .concat(sweatshirts, pants, shorts)
+        .sort((a, b) =>
+          a.description > b.description
+            ? 1
+            : b.description > a.description
+            ? -1
+            : 0
+        );
 
-const product1 = new Product(
-  `t shirt`,
-  `black`,
-  `a cool black oversized t shirt`,
-  10,
-  `194942208706-1_1280x.png`,
-  20,
-  `oversized t shirt`,
-  50
-);
+      productPageContainer.innerHTML = ``;
 
-const product2 = new Product(
-  `sweatshirt`,
-  [`navy`, `black`, `pearl white`, `yellow`, `gray`],
-  `the comfiest hoodie you can have`,
-  23,
-  `194942208706-2_1280x.png`,
-  40,
-  `oversized hoodie`,
-  20
-);
-
-const product3 = new Product(
-  `sweatshirt`,
-  [`black`, `white`, `gray`, `burgundy`],
-  `i can't promise your gf is not going to steal you this one`,
-  20,
-  `th-198647226.png`,
-  30,
-  `oversized sweatshirt`,
-  20
-);
-
-const product4 = new Product(
-  `pants`,
-  [`navy`, `black`, `grey`],
-  `some cool pants made by us with much love for you`,
-  30,
-  `th-750742328.png`,
-  45,
-  `cool loose pants`,
-  10
-);
-
-const product5 = new Product(
-  `shorts`,
-  [`navy`, `black`, `red`, `orange`],
-  `they can also be used as a swimsuit`,
-  10,
-  `th-1029833788.png`,
-  18,
-  `comfortable shorts`,
-  60
-);
-
-const inventory = [];
-inventory.push(product1, product2, product3, product4, product5);
-
-// function for displaying the products on the array on the index.html page
-const displayProduct = () => {
-  productPageContainer.innerHTML = ``;
-
-  for (let i = 0; i < inventory.length; i++) {
-    const html = `
-    <div class="product">
-      <div class="product-display">
-        <a href="">
-          <img
-          src="img/product_image/${inventory[i].image}"
-          alt="${inventory[i].category}"
-          />
-        </a>
-        <a href="#"><h4>${inventory[i].product}</h4></a>
-        <h5>${inventory[i].description}</h5>
-        <p>${inventory[i].price} €</p>
+      products.forEach((prod) => {
+        const html = `
+      <div class="product">
+        <div class="product-display">
+          <a>
+            <img
+            class="img-grid-view"
+            src="img/product_image/${prod.image}"
+            alt="${prod.category}"
+            data-hover="${prod["image-hover"]}"
+            />
+          </a>
+          <a><h4>${prod.product}</h4></a>
+          <h5>${prod.description}</h5>
+          <p>${prod.price.toFixed(2)} €</p>
+        </div>
       </div>
-    </div>
-    `;
+      `;
 
-    productPageContainer.insertAdjacentHTML(`beforeend`, html);
-  }
+        productPageContainer.insertAdjacentHTML(`beforeend`, html);
+      });
+
+      const hoverImg = document.querySelectorAll(`.product-display img`);
+
+      hoverImg.forEach((img) => {
+        img.addEventListener(`mouseover`, () => {
+          const originalSrc = img.src;
+          const imgSrc = img.getAttribute(`data-hover`);
+          img.setAttribute(`src`, `img/product_image/${imgSrc}`);
+          img.setAttribute(`data-original`, originalSrc);
+        });
+        img.addEventListener(`mouseout`, () => {
+          const originalSrc = img.getAttribute(`data-original`);
+          img.setAttribute(`src`, originalSrc);
+        });
+      });
+    });
 };
-displayProduct();
+getProduct();
