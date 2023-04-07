@@ -1,7 +1,7 @@
 {
   "tshirts": [
     {
-      "category": "t-shirt",
+      "category": "tshirt",
       "color": "yellow",
       "description": "in honor to bob marley",
       "cost": 16.25,
@@ -12,7 +12,7 @@
       "stock": 24
     },
     {
-      "category": "t-shirt",
+      "category": "tshirt",
       "color": "green",
       "description": "our signature t-shirt",
       "cost": 11.45,
@@ -23,7 +23,7 @@
       "stock": 20
     },
     {
-      "category": "t-shirt",
+      "category": "tshirt",
       "color": "brown",
       "description": "our signature t-shirt",
       "cost": 11.45,
@@ -34,7 +34,7 @@
       "stock": 23
     },
     {
-      "category": "t-shirt",
+      "category": "tshirt",
       "color": "yellow",
       "description": "our signature t-shirt",
       "cost": 11.45,
@@ -45,7 +45,7 @@
       "stock": 19
     },
     {
-      "category": "t-shirt",
+      "category": "tshirt",
       "color": "black",
       "description": "our signature t-shirt",
       "cost": 11.45,

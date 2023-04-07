@@ -66,63 +66,129 @@
       <div class="filter-and-product container">
         <div class="filter-div">
           <ul class="filter-list background-transparent">
-            <h4>Categories:</h4>
-            <li>
-              <label for="pants">
-                <input type="checkbox" name="category" value="pants" checked />
-                pants
-              </label>
-            </li>
-            <li>
-              <label for="shorts">
-                <input type="checkbox" name="category" value="shorts" checked />
-                shorts
-              </label>
-            </li>
-            <li>
-              <label for="sweatshirt">
-                <input
-                  type="checkbox"
-                  name="category"
-                  value="sweatshirt"
-                  checked
-                />
-                sweatshirts
-              </label>
-            </li>
-            <li>
-              <label for="tshirt">
-                <input type="checkbox" name="category" value="tshirt" checked />
-                t shirts
-              </label>
-            </li>
+            <h3>Filters:</h3>
+            <p class="showing"></p>
+            <div class="sort-div">
+              <h4>Sort by:</h4>
+              <div id="sort-list">
+                <li>
+                  <label for="price-lh">
+                    <input type="radio" name="sorted" class="sortPriceLH" />
+                    price (low to high)
+                  </label>
+                </li>
+                <li>
+                  <label for="price-hl">
+                    <input type="radio" name="sorted" class="sortPriceHL" />
+                    price (high to low)
+                  </label>
+                </li>
+                <li>
+                  <label for="name-az">
+                    <input type="radio" name="sorted" class="sortAZ" />
+                    name (a-z)
+                  </label>
+                </li>
+                <li>
+                  <label for="name-za">
+                    <input type="radio" name="sorted" class="sortZA" />
+                    name (z-a)
+                  </label>
+                </li>
+              </div>
+            </div>
+
+            <div class="categories-div">
+              <h4>Categories:</h4>
+              <div id="category-list">
+                <li>
+                  <label for="pants">
+                    <input
+                      type="checkbox"
+                      name="category"
+                      value="pants"
+                      checked
+                    />
+                    pants
+                  </label>
+                </li>
+                <li>
+                  <label for="shorts">
+                    <input
+                      type="checkbox"
+                      name="category"
+                      value="shorts"
+                      checked
+                    />
+                    shorts
+                  </label>
+                </li>
+                <li>
+                  <label for="sweatshirt">
+                    <input
+                      type="checkbox"
+                      name="category"
+                      value="sweatshirt"
+                      checked
+                    />
+                    sweatshirts
+                  </label>
+                </li>
+                <li>
+                  <label for="tshirt">
+                    <input
+                      type="checkbox"
+                      name="category"
+                      value="tshirt"
+                      checked
+                    />
+                    t shirts
+                  </label>
+                </li>
+              </div>
+            </div>
+
+            <div class="price-div">
             <h4>Prices:</h4>
-            <li>
-              <label for="u20">
-                <input type="checkbox" name="category" value="u20" checked />
-                under 20€
-              </label>
-            </li>
-            <li>
-              <label for="u30">
-                <input type="checkbox" name="category" value="u30" checked />
-                under 30€
-              </label>
-            </li>
-            <li>
-              <label for="u40">
-                <input type="checkbox" name="category" value="u40" checked />
-                under 40€
-              </label>
-            </li>
-            <li>
-              <label for="o50">
-                <input type="checkbox" name="category" value="o50" checked />
-                over 50€
-              </label>
-            </li>
+            <div id="price-list">
+              <li>
+                <label for="under-20">
+                  <input
+                    type="checkbox"
+                    name="price"
+                    value="under-20"
+                    checked
+                  />
+                  under 20€
+                </label>
+              </li>
+              <li>
+                <label for="20-50">
+                  <input type="checkbox" name="price" value="20-50" checked />
+                  20€ - 50€
+                </label>
+              </li>
+              <li>
+                <label for="50-100">
+                  <input type="checkbox" name="price" value="50-100" checked />
+                  50€ - 100€
+                </label>
+              </li>
+              <li>
+                <label for="over-100">
+                  <input
+                    type="checkbox"
+                    name="price"
+                    value="over-100"
+                    checked
+                  />
+                  100€ +
+                </label>
+              </li>
+            </div>
           </ul>
         </div>
+
         <div class="product-layout background-transparent"></div>
       </div>
     </section>
