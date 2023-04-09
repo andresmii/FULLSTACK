@@ -3,10 +3,14 @@
 const productPageContainer = document.querySelector(`.product-layout`);
 
 const categoryList = document.querySelector(`#category-list`);
-const priceList = document.querySelector(`#price-list`);
-
 const categories = document.querySelectorAll(`input[name="category"]`);
-const prices = document.querySelectorAll(`input[name="price"]`);
+
+const showing = document.querySelector(`.showing`);
+
+const sortLH = document.querySelector(`.sortPriceLH`);
+const sortHL = document.querySelector(`.sortPriceHL`);
+const sortAZ = document.querySelector(`.sortAZ`);
+const sortZA = document.querySelector(`.sortZA`);
 
 /////////////////////////////////////////
 /////////////////////////////////////////
@@ -22,8 +26,9 @@ const getProduct = () => {
       // concat of all the items in the json
       const products = tshirts.concat(sweatshirts, pants, shorts);
 
+      // initializating the count for every created and displayed product
+      let count = 0;
       productPageContainer.innerHTML = ``;
-
       products.forEach((prod) => {
         const html = `
           <div class="product">
@@ -42,13 +47,13 @@ const getProduct = () => {
             </div>
           </div>
         `;
-
         productPageContainer.insertAdjacentHTML(`beforeend`, html);
+        count++;
       });
 
-      // select the image element so he following function can be applied *has to be inside the parent function*
-      const hoverImg = document.querySelectorAll(`.product-display img`);
-
+      ////////////////////
+      // *selected element has to be inside the parent function for the `hoverImg` method to work*
+      const hoverImg = document.querySelectorAll(`.img-grid-view`);
       hoverImg.forEach((img) => {
         img.addEventListener(`mouseover`, () => {
           const originalSrc = img.src;
@@ -62,12 +67,18 @@ const getProduct = () => {
         });
       });
 
+      ////////////////////
+      // filter by categories *selectors are outside the whole function*
       categories.forEach((i) => {
         i.addEventListener(`change`, () => {
           const selectedCategories = Array.from(categories)
             .filter((checkbox) => checkbox.checked)
             .map((checkbox) => checkbox.value);
-          console.log(selectedCategories);
+
+          const hideFilter = document.querySelectorAll(`.product`);
+          hideFilter.forEach((el) => {
+            el.classList.add(`hidden`);
+          });
 
           const filteredCategories = products.filter((product) => {
             const isInSelectedCategories = selectedCategories.includes(
@@ -75,44 +86,66 @@ const getProduct = () => {
             );
             return isInSelectedCategories;
           });
-          console.table(filteredCategories);
-        });
-      });
-
-      prices.forEach((i) => {
-        i.addEventListener(`change`, () => {
-          const selectedPrices = Array.from(prices)
-            .filter((checkbox) => checkbox.checked)
-            .map((checkbox) => checkbox.value);
-          console.log(selectedPrices);
-
-          const filteredPrices = products.filter((product) => {
-            const isInSelectedPrices = selectedPrices.some((selectedPrice) => {
-              if (selectedPrice === "under-20") {
-                return product.price < 20;
-              } else if (selectedPrice === "20-50") {
-                return product.price >= 20 && product.price < 50;
-              } else if (selectedPrice === "50-100") {
-                return product.price >= 50 && product.price < 100;
-              } else if (selectedPrice === "over-100") {
-                return product.price >= 100;
-              }
+          filteredCategories.forEach((product) => {
+            const matchingProducts = document.querySelectorAll(
+              `.product .img-grid-view[alt="${product.category}"]`
+            );
+            matchingProducts.forEach((el) => {
+              el.closest(`.product`).classList.remove(`hidden`);
             });
-            return isInSelectedPrices;
           });
-          console.table(filteredPrices);
+
+          if (selectedCategories.length === 0) {
+            hideFilter.forEach((product) => {
+              product.classList.remove(`hidden`);
+            });
+            // for showing when no checkboxes selected
+            showing.innerHTML = `Showing: <strong>${products.length}</strong>`;
+            return;
+          }
+
+          // for showing when some checkboxes selected
+          showing.innerHTML = `Showing: <strong>${filteredCategories.length}</strong>`;
         });
       });
-      ///////////////
+
+      ////////////////////
+      // `showing` label
+      showing.innerHTML = `Showing: <strong>${count}</strong>`;
+
+      ////////////////////
+      //sort products by price or name
+      const sortPriceLH = (a, b) => {
+        return a.price - b.price;
+      };
+      const sortPriceHL = (a, b) => {
+        return b.price - a.price;
+      };
+      const sortNameAZ = (a, b) => {
+        const nameA = a.product;
+        const nameB = b.product;
+        return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+      };
+      const sortNameZA = (a, b) => {
+        const nameA = a.product;
+        const nameB = b.product;
+        return nameA > nameB ? -1 : nameA < nameB ? 1 : 0;
+      };
+
+      sortLH.addEventListener(`click`, () => {
+        console.table(products.sort(sortPriceLH));
+      });
+      sortHL.addEventListener(`click`, () => {
+        console.table(products.sort(sortPriceHL));
+      });
+      sortAZ.addEventListener(`click`, () => {
+        console.table(products.sort(sortNameAZ));
+      });
+      sortZA.addEventListener(`click`, () => {
+        console.table(products.sort(sortNameZA));
+      });
+
+      ////////////////////////////////////////
     }); // then(data) Promise finishes ***
 };
 getProduct();
-
-//////////////////////////////////////////////////////////
-
-const sortLH = document.querySelector(`.sortPriceLH`);
-const sortHL = document.querySelector(`.sortPriceHL`);
-const sortAZ = document.querySelector(`.sortAZ`);
-const sortZA = document.querySelector(`.sortZA`);
-
-//////////////////////////////////////////////////////////

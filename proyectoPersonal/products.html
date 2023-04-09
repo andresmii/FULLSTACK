@@ -29,23 +29,6 @@
             <img class="logo" src="img/wave.png" alt="logo" />
           </a>
         </div>
-        <div class="navbar-div">
-          <nav class="navbar">
-            <div class="hamburger" id="myLinks">
-              <a class="nav-el">pants</a>
-              <a class="nav-el">shorts</a>
-              <a class="nav-el">sweatshirts</a>
-              <a class="nav-el">t shirts</a>
-            </div>
-            <a
-              href="javascript:void(0);"
-              class="icon"
-              onclick="openBurgerMenu()"
-            >
-              <span class="material-symbols-outlined"> menu </span>
-            </a>
-          </nav>
-        </div>
         <div class="search-div control-el" id="search-bar">
           <span class="material-symbols-outlined search-icon"> search </span>
         </div>
@@ -55,9 +38,14 @@
           </span>
         </div>
         <div class="cart-div control-el">
-          <span class="material-symbols-outlined shop-icon">
-            shopping_bag
-          </span>
+          <div class="hamburger" id="myLinks">
+            <div class="product-cart"></div>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="openCart()">
+            <span class="material-symbols-outlined shop-icon">
+              shopping_bag
+            </span>
+          </a>
         </div>
       </div>
     </header>
@@ -103,88 +91,29 @@
               <div id="category-list">
                 <li>
                   <label for="pants">
-                    <input
-                      type="checkbox"
-                      name="category"
-                      value="pants"
-                      checked
-                    />
+                    <input type="checkbox" name="category" value="pants" />
                     pants
                   </label>
                 </li>
                 <li>
                   <label for="shorts">
-                    <input
-                      type="checkbox"
-                      name="category"
-                      value="shorts"
-                      checked
-                    />
+                    <input type="checkbox" name="category" value="shorts" />
                     shorts
                   </label>
                 </li>
                 <li>
                   <label for="sweatshirt">
-                    <input
-                      type="checkbox"
-                      name="category"
-                      value="sweatshirt"
-                      checked
-                    />
+                    <input type="checkbox" name="category" value="sweatshirt" />
                     sweatshirts
                   </label>
                 </li>
                 <li>
                   <label for="tshirt">
-                    <input
-                      type="checkbox"
-                      name="category"
-                      value="tshirt"
-                      checked
-                    />
+                    <input type="checkbox" name="category" value="tshirt" />
                     t shirts
                   </label>
                 </li>
               </div>
-            </div>
-
-            <div class="price-div">
-            <h4>Prices:</h4>
-            <div id="price-list">
-              <li>
-                <label for="under-20">
-                  <input
-                    type="checkbox"
-                    name="price"
-                    value="under-20"
-                    checked
-                  />
-                  under 20€
-                </label>
-              </li>
-              <li>
-                <label for="20-50">
-                  <input type="checkbox" name="price" value="20-50" checked />
-                  20€ - 50€
-                </label>
-              </li>
-              <li>
-                <label for="50-100">
-                  <input type="checkbox" name="price" value="50-100" checked />
-                  50€ - 100€
-                </label>
-              </li>
-              <li>
-                <label for="over-100">
-                  <input
-                    type="checkbox"
-                    name="price"
-                    value="over-100"
-                    checked
-                  />
-                  100€ +
-                </label>
-              </li>
             </div>
           </ul>
         </div>

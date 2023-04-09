@@ -1,12 +1,12 @@
 "use strict";
 
 // burger menu (for tablet and mobile)
-const burgerMenu = document.getElementById("myLinks");
+const cartMenu = document.getElementById("myLinks");
 
-const openBurgerMenu = () => {
-  burgerMenu.style.display === `block`
-    ? (burgerMenu.style.display = `none`)
-    : (burgerMenu.style.display = `block`);
+const openCart = () => {
+  cartMenu.style.display === `block`
+    ? (cartMenu.style.display = `none`)
+    : (cartMenu.style.display = `block`);
 };
 
 //////////////////////////////////////////////////
