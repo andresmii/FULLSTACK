@@ -20,7 +20,7 @@
     <title>Wabi-Sabi Shop</title>
 
     <!-- <script defer src="script.js"></script> -->
-    <script defer src="common.js"></script>
+    <script defer type="module" src="common.js"></script>
   </head>
   <body>
     <header>
@@ -29,23 +29,6 @@
           <a href="index.html">
             <img class="logo" src="img/wave.png" alt="logo" />
           </a>
-        </div>
-        <div class="navbar-div">
-          <nav class="navbar">
-            <div class="hamburger" id="myLinks">
-              <a class="nav-el">pants</a>
-              <a class="nav-el">shorts</a>
-              <a class="nav-el">sweatshirts</a>
-              <a class="nav-el">t shirts</a>
-            </div>
-            <a
-              href="javascript:void(0);"
-              class="icon"
-              onclick="openBurgerMenu()"
-            >
-              <span class="material-symbols-outlined"> menu </span>
-            </a>
-          </nav>
         </div>
         <div class="search-div control-el" id="search-bar">
           <span class="material-symbols-outlined search-icon"> search </span>
@@ -56,9 +39,14 @@
           </span>
         </div>
         <div class="cart-div control-el">
-          <span class="material-symbols-outlined shop-icon">
-            shopping_bag
-          </span>
+          <div class="hamburger" id="myLinks">
+            <div class="product-cart"></div>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="openCart()">
+            <span class="material-symbols-outlined shop-icon">
+              shopping_bag
+            </span>
+          </a>
         </div>
       </div>
     </header>
@@ -90,7 +78,7 @@
           </div>
         </div>
         <div class="content-div">
-          <div class="orders-menu">
+          <div class="orders-menu background-transparent">
             <h2>my orders</h2>
             <table class="orders-table">
               <thead>
@@ -113,12 +101,12 @@
               </tbody>
             </table>
           </div>
-          <div class="account-info-menu">
+          <div class="account-info-menu background-transparent">
             <h2>account information</h2>
             <div></div>
             <div></div>
           </div>
-          <div class="addresses-info">
+          <div class="addresses-info background-transparent">
             <h2>my addresses</h2>
             <div>
               <div></div>
@@ -132,9 +120,9 @@
     <footer>
       <div class="site-map container">
         <div class="socials">
-          <a href=""><img src="img/instagram.png" alt="instagram logo" /></a>
-          <a href=""><img src="img/twitter.png" alt="twitter logo" /></a>
-          <a href=""><img src="img/whatsapp.png" alt="whatsapp logo" /></a>
+          <a><img src="img/instagram.png" alt="instagram logo" /></a>
+          <a><img src="img/twitter.png" alt="twitter logo" /></a>
+          <a><img src="img/whatsapp.png" alt="whatsapp logo" /></a>
         </div>
       </div>
       <div class="copyright container">
@@ -147,21 +135,21 @@
 
     <div class="user-modal hidden" id="user-modal">
       <button class="btn--close-modal">&times;</button>
-      <form method="post" action="">
+      <form class="sign-in-modal" id="sign-in-modal">
         <h2>Sign into your account:</h2>
         <div class="login-inputs">
           <label for="email">Email:</label>
-          <input type="email" id="email" placeholder="email" required />
+          <input type="email" id="sign-in-email" placeholder="email" required />
           <label for="password">Password:</label>
           <input
             type="password"
             name="password"
-            id="password"
+            id="sign-in-password"
             placeholder="password"
             required
           />
         </div>
-        <input type="submit" name="submit" id="submit" value="Continue" />
+        <input type="button" name="sign-in" id="sign-in" value="Sign In" />
         <h5 class="register">
           Don't have an account? <a href="register.html">Register here!</a>
         </h5>

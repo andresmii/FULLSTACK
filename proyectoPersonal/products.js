@@ -26,30 +26,36 @@ const getProduct = () => {
       // concat of all the items in the json
       const products = tshirts.concat(sweatshirts, pants, shorts);
 
-      // initializating the count for every created and displayed product
-      let count = 0;
-      productPageContainer.innerHTML = ``;
-      products.forEach((prod) => {
-        const html = `
-          <div class="product">
-            <div class="product-display">
-              <a>
-                <img
-                  class="img-grid-view"
-                  src="img/product_image/${prod.image}"
-                  alt="${prod.category}"
-                  data-hover="${prod["image-hover"]}"
-                />
-              </a>
-              <a><h4>${prod.product}</h4></a>
-              <h5>${prod.description}</h5>
-              <p class="price">${prod.price.toFixed(2)} €</p>
-            </div>
+      // html element where the products are displayed
+      const createProductHTML = (prod) => {
+        return `
+        <div class="product">
+          <div class="product-display">
+            <a>
+              <img
+                class="img-grid-view"
+                src="img/product_image/${prod.image}"
+                alt="${prod.category}"
+                data-hover="${prod["image-hover"]}"
+              />
+            </a>
+            <a><h4>${prod.product}</h4></a>
+            <h5>${prod.description}</h5>
+            <p class="price">${prod.price.toFixed(2)} €</p>
           </div>
-        `;
+        </div>
+      `;
+      };
+
+      ////////////////////
+
+      let count = 0; // declare a variable to count every created and displayed product
+      productPageContainer.innerHTML = ``; // empty the content of the container where the products are going to be displayed
+      products.forEach((prod) => {
+        const html = createProductHTML(prod);
         productPageContainer.insertAdjacentHTML(`beforeend`, html);
         count++;
-      });
+      }); // loop over the data fetched and create every product
 
       ////////////////////
       // *selected element has to be inside the parent function for the `hoverImg` method to work*

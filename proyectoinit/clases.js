@@ -999,68 +999,73 @@
 
 // console.log(4);
 
-///////////////////////////
-const firstNameInput = document.querySelector(`#firstName`);
-const lastNameInput = document.querySelector(`#lastName`);
-const emailInput = document.querySelector(`#email`);
-const form = document.querySelector(`form`);
+// ///////////////////////////
+// const firstNameInput = document.querySelector(`#firstName`);
+// const lastNameInput = document.querySelector(`#lastName`);
+// const emailInput = document.querySelector(`#email`);
+// const form = document.querySelector(`form`);
 
-// firstNameInput.addEventListener(`change`, (e) => {
-//   // console.log(`escribiendo nombre`); // `change` type logs the info typed, when you deselect it
+// // firstNameInput.addEventListener(`change`, (e) => {
+// //   // console.log(`escribiendo nombre`); // `change` type logs the info typed, when you deselect it
+// // });
+// firstNameInput.addEventListener(`input`, (e) => {});
+// lastNameInput.addEventListener(`input`, (e) => {
+//   // console.log(`escribiendo apellido`); // `input` type does the log of each key event
+//   // console.log(e.target.value);
 // });
-firstNameInput.addEventListener(`input`, (e) => {});
-lastNameInput.addEventListener(`input`, (e) => {
-  // console.log(`escribiendo apellido`); // `input` type does the log of each key event
-  // console.log(e.target.value);
-});
-emailInput.addEventListener(`input`, (e) => {
-  // console.log(e.target.value);
-});
+// emailInput.addEventListener(`input`, (e) => {
+//   // console.log(e.target.value);
+// });
+
+// // form.addEventListener(`submit`, (e) => {
+// //   e.preventDefault();
+// //   console.log(`enviando formulario...📨`);
+// // });
 
 // form.addEventListener(`submit`, (e) => {
 //   e.preventDefault();
 //   console.log(`enviando formulario...📨`);
+
+//   // create an object to hold the form data
+//   const formData = {
+//     firstName: firstNameInput.value,
+//     lastName: lastNameInput.value,
+//     email: emailInput.value,
+//   };
+
+//   // convert the form data to JSON format
+//   const jsonData = JSON.stringify(formData);
+
+//   // send the JSON data to the server
+//   fetch("http://localhost:3000/data", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: jsonData,
+//   })
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error("Network response was not ok");
+//       }
+//       console.log("Form data saved successfully");
+//     })
+//     .catch((error) => {
+//       console.error("There was a problem saving the form data:", error);
+//     });
 // });
 
-form.addEventListener(`submit`, (e) => {
-  e.preventDefault();
-  console.log(`enviando formulario...📨`);
+// // After saving the form data to the file, fetch the contents of the file and log it to the console
+// fetch("db.json")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log("Form data saved:", data);
+//   })
+//   .catch((error) => {
+//     console.error("Error fetching form data:", error);
+//   });
 
-  // create an object to hold the form data
-  const formData = {
-    firstName: firstNameInput.value,
-    lastName: lastNameInput.value,
-    email: emailInput.value,
-  };
-
-  // convert the form data to JSON format
-  const jsonData = JSON.stringify(formData);
-
-  // send the JSON data to the server
-  fetch("http://localhost:3000/data", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: jsonData,
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      console.log("Form data saved successfully");
-    })
-    .catch((error) => {
-      console.error("There was a problem saving the form data:", error);
-    });
-});
-
-// After saving the form data to the file, fetch the contents of the file and log it to the console
-fetch("db.json")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log("Form data saved:", data);
-  })
-  .catch((error) => {
-    console.error("Error fetching form data:", error);
-  });
+/////////////////////////////////
+/////////////////////////////////
+/////////////////////////////////
+/////////////////////////////////
