@@ -5,44 +5,6 @@ import { getFormDataArr } from "./register.js";
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
-// login modal inputs
-const signInEmail = document.getElementById(`sign-in-email`);
-const signInPassword = document.getElementById(`sign-in-password`);
-const signInBtn = document.getElementById(`sign-in`);
-
-signInBtn.addEventListener(`click`, () => {
-  const email = signInEmail.value;
-  const pwd = signInPassword.value;
-
-  // retrieve the latest data
-  const formDataArr = getFormDataArr();
-
-  // loop through formDataArr to check if email and password match
-  let isLoggedIn = false;
-  for (let i = 0; i < formDataArr.length; i++) {
-    if (formDataArr[i].email === email && formDataArr[i].newPassword === pwd) {
-      isLoggedIn = true;
-      console.log(`signed in succesfully!`);
-      break;
-    }
-  }
-  if (!isLoggedIn) console.log(`invalid email or password`);
-});
-
-//////////////////////////////////////////////////
-//////////////////////////////////////////////////
-
-const cartMenu = document.getElementById(`myLinks`);
-
-const openCart = () => {
-  cartMenu.style.display === `block`
-    ? (cartMenu.style.display = `none`)
-    : (cartMenu.style.display = `block`);
-};
-
-//////////////////////////////////////////////////
-//////////////////////////////////////////////////
-
 // opening and closing login modal
 const userModal = document.querySelector(`.user-modal`);
 const userOverlay = document.querySelector(`.user-overlay`);
@@ -71,3 +33,64 @@ document.addEventListener(`keydown`, (e) => {
     closeUserModal();
   }
 });
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
+// login modal inputs
+const signInEmail = document.getElementById(`sign-in-email`);
+const signInPassword = document.getElementById(`sign-in-password`);
+const signInBtn = document.getElementById(`sign-in`);
+
+const user = document.querySelector(`.profile-div`);
+
+const signInInputs = document.querySelector(`.login-inputs`);
+
+const displayName = document.querySelector(`.dashboard-text h4`);
+
+signInBtn.addEventListener(`click`, () => {
+  const email = signInEmail.value;
+  const pwd = signInPassword.value;
+  const errorMessage = `<p class="errorMsg">Invalid email or password</p>`;
+
+  // retrieve the latest data
+  const formDataArr = getFormDataArr();
+
+  // loop through formDataArr to check if email and password match
+  let isLoggedIn = false;
+  for (let i = 0; i < formDataArr.length; i++) {
+    if (formDataArr[i].email === email && formDataArr[i].newPassword === pwd) {
+      isLoggedIn = true;
+      signInEmail.value = ``;
+      signInPassword.value = ``;
+      user.innerHTML = `${formDataArr[i].firstName
+        .charAt(0)
+        .toUpperCase()
+        .concat(formDataArr[i].lastName.charAt(0).toUpperCase())}`;
+      closeUserModal();
+      displayName.textContent = `Welcome, ${formDataArr[i].firstName} ${formDataArr[i].lastName}`;
+      // location.href = `index.html`;
+      break;
+    }
+  }
+  if (!isLoggedIn) {
+    signInInputs.insertAdjacentHTML(`afterbegin`, errorMessage);
+    signInEmail.value = ``;
+    signInPassword.value = ``;
+  }
+});
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
+const cartMenu = document.getElementById(`myLinks`);
+
+const openCart = () => {
+  cartMenu.style.display === `block`
+    ? (cartMenu.style.display = `none`)
+    : (cartMenu.style.display = `block`);
+};
+openCart();
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////

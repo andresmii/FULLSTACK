@@ -41,7 +41,26 @@ const getProduct = () => {
             </a>
             <a><h4>${prod.product}</h4></a>
             <h5>${prod.description}</h5>
-            <p class="price">${prod.price.toFixed(2)} €</p>
+            <div class="price-addtocart">
+              <p class="price">${prod.price.toFixed(2)} €</p>
+              <div class="addtocart">
+                <label>add to cart</label>
+                <input
+                  class="cartPush"
+                  id="removeCart"
+                  type="button"
+                  onclick=""
+                  value="-"
+                />
+                <input
+                  class="cartPush"
+                  id="addCart"
+                  type="button"
+                  onclick=""
+                  value="+"
+                />
+              </div>
+            </div>
           </div>
         </div>
       `;
@@ -56,6 +75,10 @@ const getProduct = () => {
         productPageContainer.insertAdjacentHTML(`beforeend`, html);
         count++;
       }); // loop over the data fetched and create every product
+
+      ////////////////////
+      // `showing` label
+      showing.innerHTML = `Showing: <strong>${count}</strong>`;
 
       ////////////////////
       // *selected element has to be inside the parent function for the `hoverImg` method to work*
@@ -114,10 +137,6 @@ const getProduct = () => {
           showing.innerHTML = `Showing: <strong>${filteredCategories.length}</strong>`;
         });
       });
-
-      ////////////////////
-      // `showing` label
-      showing.innerHTML = `Showing: <strong>${count}</strong>`;
 
       ////////////////////
       //sort products by price or name
